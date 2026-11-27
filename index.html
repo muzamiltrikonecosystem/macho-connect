@@ -1,0 +1,2502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MACHO CONNECT — Unified luxury digital commerce ecosystem prototype for J.G. Hosiery Pvt. Ltd. featuring Macho, Sporto, and Zoiro.">
+  <title>MACHO CONNECT — J.G. Hosiery House of Brands</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..600&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./app.js" defer></script>
+</head>
+<body data-brand="hub">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header" id="site-header">
+    <div class="header-inner container">
+      <div class="header-left">
+        <button type="button" class="brand-lockup" data-switch-brand="hub" aria-label="Macho Connect Home — J.G. Hosiery House of Brands">
+          <span class="brand-monogram" aria-hidden="true">MC</span>
+          <span class="brand-wordmark-group">
+            <span class="header-logo-pill" id="header-logo-pill">
+              <img id="header-brand-logo" src="./Images/logo_macho_light.png" alt="Amul Macho" class="header-brand-logo" width="184" height="21">
+            </span>
+            <span class="brand-wordmark">MACHO CONNECT</span>
+            <span class="brand-submark" id="header-brand-submark">J.G. HOSIERY ECOSYSTEM</span>
+          </span>
+        </button>
+
+        <div class="channel-toggle" role="group" aria-label="Storefront channel mode">
+          <button type="button" class="utility-pill" id="mode-d2c-btn" data-channel-mode="d2c" aria-pressed="true">D2C</button>
+          <button type="button" class="utility-pill" id="mode-b2b-btn" data-channel-mode="b2b" aria-pressed="false">B2B</button>
+        </div>
+      </div>
+
+      <nav class="brand-switcher" id="brand-switcher-nav" aria-label="Brand Worlds">
+        <div class="switcher-track" role="tablist" aria-label="Switch brand world">
+          <button type="button" role="tab" class="switcher-pill" data-brand-tab="hub" aria-selected="true">ALL HUB</button>
+          <button type="button" role="tab" class="switcher-pill" data-brand-tab="macho" aria-selected="false">MACHO</button>
+          <button type="button" role="tab" class="switcher-pill" data-brand-tab="sporto" aria-selected="false">SPORTO</button>
+          <button type="button" role="tab" class="switcher-pill" data-brand-tab="zoiro" aria-selected="false">ZOIRO</button>
+        </div>
+
+        <!-- Desktop Hover Mega-Dropdown -->
+        <div class="mega-panel" id="brand-mega-menu" hidden aria-live="polite"></div>
+
+        <!-- Mobile (<768px) Compact Brand Selector -->
+        <div class="mobile-brand-wrap">
+          <button
+            type="button"
+            class="mobile-brand-trigger"
+            id="mobile-brand-trigger"
+            aria-expanded="false"
+            aria-controls="mobile-brand-menu"
+            aria-label="Switch active brand world"
+          >
+            <span class="mobile-brand-dot" id="mobile-brand-dot" aria-hidden="true"></span>
+            <span id="mobile-brand-label">ALL HUB</span>
+            <span aria-hidden="true">&#9662;</span>
+          </button>
+          <div class="mobile-brand-menu" id="mobile-brand-menu" hidden role="menu">
+            <button type="button" class="mobile-brand-option" data-mobile-brand="hub" role="menuitem">
+              <span class="mobile-brand-dot" style="background:#ffffff;border-color:rgba(17,17,17,0.2);"></span>
+              <span>ALL HUB · Flagship Day</span>
+            </button>
+            <button type="button" class="mobile-brand-option" data-mobile-brand="macho" role="menuitem">
+              <span class="mobile-brand-dot" style="background:#1a234e;border-color:#f4c430;"></span>
+              <span>MACHO · Warm Heritage</span>
+            </button>
+            <button type="button" class="mobile-brand-option" data-mobile-brand="sporto" role="menuitem">
+              <span class="mobile-brand-dot" style="background:#1e64d8;"></span>
+              <span>SPORTO · Kinetic Activewear</span>
+            </button>
+            <button type="button" class="mobile-brand-option" data-mobile-brand="zoiro" role="menuitem">
+              <span class="mobile-brand-dot" style="background:#9e844e;"></span>
+              <span>ZOIRO · Quiet Luxury</span>
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="fit-header-badge" id="header-fit-badge" aria-label="Open Smart Fit Finder" aria-haspopup="dialog">
+          <span id="header-fit-label">My Fit</span>
+        </button>
+
+        <button type="button" class="icon-btn" id="search-open-btn" aria-label="Open catalog search" aria-haspopup="dialog">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.3-4.3"></path>
+          </svg>
+          <span class="btn-label-desktop">Search</span>
+        </button>
+
+        <button type="button" class="cart-btn" id="cart-open-btn" aria-label="Open shopping bag" aria-haspopup="dialog" aria-expanded="false">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+            <path d="M3 6h18"></path>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="btn-label-desktop">Bag</span>
+          <span class="cart-badge" id="cart-badge">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <!-- =========================================================
+         WORLD 1: MAIN HUB
+         ========================================================= -->
+    <section class="world-view is-active" data-world="hub" aria-label="Macho Connect Main Hub">
+      <div class="hub-hero" id="hub-hero">
+        <div class="hub-hero-backdrop" id="hub-hero-backdrop" aria-hidden="true"></div>
+        <div class="container hub-hero-grid">
+          <div class="hub-hero-copy">
+            <p class="eyebrow" id="hub-hero-eyebrow">J.G. HOSIERY PVT. LTD. · HOUSE OF BRANDS</p>
+            <h1 class="hero-title" id="hub-hero-title">Dawn Sweat. Zero Drag.</h1>
+            <p class="hero-desc" id="hub-hero-desc">One seamless Indian apparel ecosystem—from high-intensity morning training in Sporto to effortless everyday comfort in Macho and quiet-luxury evenings in Zoiro.</p>
+
+            <div class="hub-time-pills" role="group" aria-label="Select time of day">
+              <button type="button" class="hub-time-pill is-selected" data-day-index="0" aria-pressed="true">
+                <span class="hub-time-dot" aria-hidden="true"></span>
+                <span>6:00 AM · Sporto</span>
+              </button>
+              <button type="button" class="hub-time-pill" data-day-index="1" aria-pressed="false">
+                <span class="hub-time-dot" aria-hidden="true"></span>
+                <span>10:00 AM · Macho</span>
+              </button>
+              <button type="button" class="hub-time-pill" data-day-index="2" aria-pressed="false">
+                <span class="hub-time-dot" aria-hidden="true"></span>
+                <span>8:00 PM · Zoiro</span>
+              </button>
+            </div>
+
+            <div class="hero-cta-row">
+              <button type="button" class="btn-primary" id="hub-enter-world-btn">Enter Sporto World</button>
+              <a class="btn-ghost" href="#choose-your-world">Explore All Worlds</a>
+            </div>
+          </div>
+
+          <div class="hub-hero-visual">
+            <div class="hero-photo-frame">
+              <img
+                id="hub-hero-img"
+                src="./Images/sporto_t-shirt.webp"
+                alt="Sporto active mesh tee worn during morning workout"
+                class="model-photo"
+                width="900"
+                height="1125"
+                fetchpriority="high"
+              >
+              <span class="hero-mood-pill" id="hub-mood-pill">06:00 AM · DAWN TRAINING</span>
+            </div>
+
+            <article class="floating-outfit-card" aria-label="Featured outfit for selected time of day">
+              <div class="outfit-thumb">
+                <img
+                  id="hub-outfit-thumb"
+                  src="./Images/sporto_track.webp"
+                  alt="Outfit companion piece"
+                  class="model-photo"
+                  width="120"
+                  height="150"
+                >
+              </div>
+              <div class="outfit-meta">
+                <span class="outfit-kicker" id="hub-outfit-brand">SPORTO LOOK</span>
+                <h2 class="outfit-name" id="hub-outfit-title">Instacool Tee + Track Pants</h2>
+                <p class="outfit-price" id="hub-outfit-price">&#8377;1,070 <span class="outfit-note">2-Piece Set</span></p>
+              </div>
+              <button type="button" class="btn-accent-sm" id="hub-quick-add-outfit">Quick Add Outfit</button>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <!-- Choose Your World -->
+      <section class="section container" id="choose-your-world" aria-labelledby="worlds-heading">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">FLAGSHIP PORTFOLIOS</p>
+            <h2 class="section-title" id="worlds-heading">Choose Your World</h2>
+          </div>
+          <p class="section-subtitle">Click any brand below to transform the entire storefront identity, palette, typography, and interactive tools in 300ms.</p>
+        </div>
+
+        <div class="worlds-grid">
+          <article class="world-card world-card-macho">
+            <div class="world-card-media">
+              <img src="./Images/macho.webp" alt="Macho men's innerwear trunks" class="model-photo" width="760" height="950" loading="lazy">
+              <span class="world-tag">BOLD EVERYDAY</span>
+            </div>
+            <div class="world-card-body">
+              <div class="world-logo-plate">
+                <img src="./Images/logo_macho_light.png" alt="Amul Macho official logo" class="world-brand-logo" width="219" height="25" loading="lazy">
+              </div>
+              <p class="world-kicker">MEN'S INNERWEAR</p>
+              <h3 class="world-name sr-only">MACHO</h3>
+              <p class="world-copy">Unmatched Indian everyday fit—premium combed cotton trunks, briefs, and ribbed vests with custom 5-slot Pack Builder.</p>
+              <button type="button" class="btn-world" data-switch-brand="macho">Enter Macho &rarr;</button>
+            </div>
+          </article>
+
+          <article class="world-card world-card-sporto">
+            <div class="world-card-media">
+              <img src="./Images/sporto_t-shirt.webp" alt="Sporto performance athleisure tee" class="model-photo" width="760" height="950" loading="lazy">
+              <span class="world-tag">HIGH-CONTRAST ACTIVE</span>
+            </div>
+            <div class="world-card-body">
+              <div class="world-logo-plate">
+                <img src="./Images/logo_sporto_light.png" alt="Sporto official logo" class="world-brand-logo" width="167" height="36" loading="lazy">
+              </div>
+              <p class="world-kicker">ATHLEISURE &amp; ACTIVEWEAR</p>
+              <h3 class="world-name sr-only">SPORTO</h3>
+              <p class="world-copy">4-Way Stretch tees, Instacool jersey vests, dry-fit gym wear, and track pants engineered for training &amp; street movement.</p>
+              <button type="button" class="btn-world" data-switch-brand="sporto">Enter Sporto &rarr;</button>
+            </div>
+          </article>
+
+          <article class="world-card world-card-zoiro">
+            <div class="world-card-media">
+              <img src="./Images/zoiro_polo.webp" alt="Zoiro luxury polo and trousers" class="model-photo" width="760" height="950" loading="lazy">
+              <span class="world-tag">QUIET LUXURY</span>
+            </div>
+            <div class="world-card-body">
+              <div class="world-logo-plate">
+                <img src="./Images/logo_zoiro_light.png" alt="Zoiro official logo" class="world-brand-logo" width="155" height="36" loading="lazy">
+              </div>
+              <p class="world-kicker">PREMIUM INNERWEAR &amp; LOUNGE</p>
+              <h3 class="world-name sr-only">ZOIRO</h3>
+              <p class="world-copy">Minimalist editorial essentials in Micro-Modal and Pima cotton—crafted for Work, Travel, Play, and Lounge.</p>
+              <button type="button" class="btn-world" data-switch-brand="zoiro">Enter Zoiro &rarr;</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Trending Across the Ecosystem -->
+      <section class="section container" id="hub-trending" aria-labelledby="hub-trending-heading">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">CROSS-BRAND EDIT · UNIFIED BAG</p>
+            <h2 class="section-title" id="hub-trending-heading">Trending Across the Ecosystem</h2>
+          </div>
+          <div class="filter-pills" id="hub-trending-filters" role="group" aria-label="Filter trending products by brand">
+            <button type="button" class="filter-pill is-active" data-hub-trend="all" aria-pressed="true">All Brands</button>
+            <button type="button" class="filter-pill" data-hub-trend="macho" aria-pressed="false">Macho</button>
+            <button type="button" class="filter-pill" data-hub-trend="sporto" aria-pressed="false">Sporto</button>
+            <button type="button" class="filter-pill" data-hub-trend="zoiro" aria-pressed="false">Zoiro</button>
+          </div>
+        </div>
+
+        <div class="hub-trending-grid" id="hub-trending-grid"></div>
+      </section>
+
+      <!-- The J.G. Hosiery Textile Engine -->
+      <section class="section container" id="hub-textile-engine" aria-labelledby="textile-engine-heading">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">VERTICALLY INTEGRATED R&amp;D · TIRUPUR &amp; KOLKATA</p>
+            <h2 class="section-title" id="textile-engine-heading">The J.G. Hosiery Textile Engine</h2>
+          </div>
+          <p class="section-subtitle">Proprietary yarn engineering tailored to every hour of the modern Indian wardrobe—three material sciences under one roof.</p>
+        </div>
+
+        <div class="textile-engine-grid">
+          <article class="textile-glass-card" data-engine-brand="macho">
+            <div class="textile-card-top">
+              <span class="cart-brand-pill" data-item-brand="macho">MACHO</span>
+              <span class="textile-craft-tag">Everyday Poise</span>
+            </div>
+            <h3>Super-Combed Cotton</h3>
+            <p>Tirupur long-staple yarns engineered for 16-hour everyday softness &amp; zero-roll waistbands.</p>
+            <div class="textile-specs-row">
+              <div class="textile-spec-chip">
+                <span>Breathability</span>
+                <strong>94%</strong>
+              </div>
+              <div class="textile-spec-chip">
+                <span>Softness</span>
+                <strong>96%</strong>
+              </div>
+            </div>
+            <button type="button" class="btn-world textile-cta-btn" data-switch-brand="macho">Explore Macho <span aria-hidden="true">&#8599;</span></button>
+          </article>
+
+          <article class="textile-glass-card" data-engine-brand="sporto">
+            <div class="textile-card-top">
+              <span class="cart-brand-pill" data-item-brand="sporto">SPORTO</span>
+              <span class="textile-craft-tag">Kinetic Output</span>
+            </div>
+            <h3>Instacool 4-Way Mesh</h3>
+            <p>High-velocity moisture-wicking knit built for coastal humidity &amp; heavy training.</p>
+            <div class="textile-specs-row">
+              <div class="textile-spec-chip">
+                <span>Sweat-Wick</span>
+                <strong>98%</strong>
+              </div>
+              <div class="textile-spec-chip">
+                <span>4-Way Recovery</span>
+                <strong>95%</strong>
+              </div>
+            </div>
+            <button type="button" class="btn-world textile-cta-btn" data-switch-brand="sporto">Explore Sporto <span aria-hidden="true">&#8599;</span></button>
+          </article>
+
+          <article class="textile-glass-card" data-engine-brand="zoiro">
+            <div class="textile-card-top">
+              <span class="cart-brand-pill" data-item-brand="zoiro">ZOIRO</span>
+              <span class="textile-craft-tag">Quiet Luxury</span>
+            </div>
+            <h3>Fine-Gauge Micro-Modal</h3>
+            <p>Featherweight beechwood-pulp drape with invisible seams and zero-crease travel structure.</p>
+            <div class="textile-specs-row">
+              <div class="textile-spec-chip">
+                <span>Drape Fluidity</span>
+                <strong>99%</strong>
+              </div>
+              <div class="textile-spec-chip">
+                <span>Crease Resistance</span>
+                <strong>94%</strong>
+              </div>
+            </div>
+            <button type="button" class="btn-world textile-cta-btn" data-switch-brand="zoiro">Explore Zoiro <span aria-hidden="true">&#8599;</span></button>
+          </article>
+        </div>
+      </section>
+
+      <!-- J.G. Hosiery Legacy & Ecosystem Strip -->
+      <section class="section legacy-section" aria-labelledby="legacy-heading">
+        <div class="container">
+          <div class="legacy-panel">
+            <div class="legacy-header">
+              <p class="eyebrow">J.G. HOSIERY PVT. LTD. · EST. 1978–79</p>
+              <h2 class="section-title" id="legacy-heading">Scale Built Over Four Decades</h2>
+              <p class="section-subtitle">Tirupur and Kolkata manufacturing powerhouses uniting Pan-India retail depth with direct-to-consumer digital precision.</p>
+            </div>
+
+            <dl class="legacy-stats">
+              <div class="stat-box">
+                <span class="stat-icon-3d" aria-hidden="true">
+                  <svg width="34" height="34" viewBox="0 0 36 36" fill="none">
+                    <defs>
+                      <linearGradient id="svg-stat-her-a" x1="4" y1="4" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                        <stop offset="0%" stop-color="#f8fafc"/>
+                        <stop offset="100%" stop-color="#64748b"/>
+                      </linearGradient>
+                      <linearGradient id="svg-stat-her-b" x1="8" y1="8" x2="28" y2="28" gradientUnits="userSpaceOnUse">
+                        <stop offset="0%" stop-color="#ffffff" stop-opacity="0.72"/>
+                        <stop offset="100%" stop-color="#94a3b8" stop-opacity="0.18"/>
+                      </linearGradient>
+                    </defs>
+                    <ellipse cx="18" cy="30" rx="11" ry="3" fill="rgba(0,0,0,0.38)"/>
+                    <path d="M9 12L18 7L27 12V24L18 29L9 24V12Z" fill="url(#svg-stat-her-a)" fill-opacity="0.22" stroke="url(#svg-stat-her-a)" stroke-width="1.4"/>
+                    <path d="M12 14L18 10.5L24 14V22L18 25.5L12 22V14Z" fill="url(#svg-stat-her-b)"/>
+                    <path d="M9 12L18 17L27 12" stroke="#ffffff" stroke-opacity="0.7" stroke-width="1.3"/>
+                  </svg>
+                </span>
+                <dt>Heritage</dt>
+                <dd>45+ Years</dd>
+              </div>
+              <div class="stat-box">
+                <span class="stat-icon-3d" aria-hidden="true">
+                  <svg width="34" height="34" viewBox="0 0 36 36" fill="none">
+                    <defs>
+                      <linearGradient id="svg-stat-rev-a" x1="6" y1="6" x2="30" y2="30" gradientUnits="userSpaceOnUse">
+                        <stop offset="0%" stop-color="#f5e6c8"/>
+                        <stop offset="100%" stop-color="#b79a5b"/>
+                      </linearGradient>
+                      <linearGradient id="svg-stat-rev-b" x1="12" y1="10" x2="26" y2="28" gradientUnits="userSpaceOnUse">
+                        <stop offset="0%" stop-color="#ffffff" stop-opacity="0.75"/>
+                        <stop offset="100%" stop-color="#b79a5b" stop-opacity="0.2"/>
+                      </linearGradient>
+                    </defs>
+                    <ellipse cx="18" cy="30.5" rx="12" ry="2.8" fill="rgba(0,0,0,0.38)"/>
+                    <path d="M7 20L12 17L12 26L7 29V20Z" fill="url(#svg-stat-rev-a)" fill-opacity="0.45"/>
+                    <path d="M15 14L20 11L20 26L15 29V14Z" fill="url(#svg-stat-rev-a)" fill-opacity="0.7"/>
+                    <path d="M23 9L28 6V26L23 29V9Z" fill="url(#svg-stat-rev-b)" stroke="#f8fafc" stroke-opacity="0.65" stroke-width="1.1"/>
+                  </svg>
+                </span>
+                <dt>Annual Turnover</dt>
+                <dd>&#8377;3,000+ Cr</dd>
+              </div>
+              <div class="stat-box">
+                <span class="stat-icon-3d" aria-hidden="true">
+                  <svg width="34" height="34" viewBox="0 0 36 36" fill="none">
+                    <defs>
+                      <linearGradient id="svg-stat-dist-a" x1="6" y1="6" x2="30" y2="30" gradientUnits="userSpaceOnUse">
+                        <stop offset="0%" stop-color="#e2e8f0"/>
+                        <stop offset="100%" stop-color="#475569"/>
+                      </linearGradient>
+                      <linearGradient id="svg-stat-dist-b" x1="12" y1="8" x2="24" y2="24" gradientUnits="userSpaceOnUse">
+                        <stop offset="0%" stop-color="#ffffff" stop-opacity="0.85"/>
+                        <stop offset="100%" stop-color="#cbd5e1" stop-opacity="0.2"/>
+                      </linearGradient>
+                    </defs>
+                    <ellipse cx="18" cy="30.5" rx="11.5" ry="2.6" fill="rgba(0,0,0,0.38)"/>
+                    <path d="M18 6L28 11.5V22.5L18 28L8 22.5V11.5L18 6Z" fill="url(#svg-stat-dist-a)" fill-opacity="0.26" stroke="url(#svg-stat-dist-a)" stroke-width="1.3"/>
+                    <path d="M18 6L28 11.5L18 17L8 11.5L18 6Z" fill="url(#svg-stat-dist-b)"/>
+                    <circle cx="18" cy="17" r="3.2" fill="#ffffff" fill-opacity="0.9"/>
+                  </svg>
+                </span>
+                <dt>Distribution Network</dt>
+                <dd>1,300+ Distributors</dd>
+              </div>
+              <div class="stat-box">
+                <span class="stat-icon-3d" aria-hidden="true">
+                  <svg width="34" height="34" viewBox="0 0 36 36" fill="none">
+                    <defs>
+                      <linearGradient id="svg-stat-ret-a" x1="5" y1="5" x2="31" y2="31" gradientUnits="userSpaceOnUse">
+                        <stop offset="0%" stop-color="#fca5a5"/>
+                        <stop offset="100%" stop-color="#d7192d"/>
+                      </linearGradient>
+                      <linearGradient id="svg-stat-ret-b" x1="9" y1="8" x2="27" y2="20" gradientUnits="userSpaceOnUse">
+                        <stop offset="0%" stop-color="#ffffff" stop-opacity="0.8"/>
+                        <stop offset="100%" stop-color="#f87171" stop-opacity="0.25"/>
+                      </linearGradient>
+                    </defs>
+                    <ellipse cx="18" cy="30.5" rx="11.5" ry="2.6" fill="rgba(0,0,0,0.38)"/>
+                    <path d="M8 14L18 8L28 14V26L18 30L8 26V14Z" fill="url(#svg-stat-ret-a)" fill-opacity="0.24" stroke="url(#svg-stat-ret-a)" stroke-width="1.3"/>
+                    <path d="M8 14L18 19L28 14L18 8L8 14Z" fill="url(#svg-stat-ret-b)" stroke="#ffffff" stroke-opacity="0.6" stroke-width="1"/>
+                    <path d="M18 19V30" stroke="#ffffff" stroke-opacity="0.55" stroke-width="1.2"/>
+                  </svg>
+                </span>
+                <dt>Retail Footprint</dt>
+                <dd>1.1 Lakh+ Retailers</dd>
+              </div>
+            </dl>
+
+            <div class="ecosystem-upcoming">
+              <h3 class="upcoming-heading">COMING TO THE ECOSYSTEM</h3>
+              <div class="upcoming-grid">
+                <article class="upcoming-card">
+                  <div class="upcoming-thumb">
+                    <img src="./Images/comfy_everyday.jpg" alt="Amul Comfy Pack of 3 everyday cotton innerwear" class="model-photo" width="120" height="150" loading="lazy">
+                  </div>
+                  <div class="upcoming-content">
+                    <div class="upcoming-top">
+                      <h4>Amul Comfy</h4>
+                      <span class="coming-pill">Coming to Ecosystem</span>
+                    </div>
+                    <p>Mass-market everyday innerwear serving tier-2 &amp; tier-3 Indian households with dependable combed cotton value.</p>
+                  </div>
+                </article>
+
+                <article class="upcoming-card">
+                  <div class="woven-emblem" aria-hidden="true">KF</div>
+                  <div class="upcoming-content">
+                    <div class="upcoming-top">
+                      <h4>Amul Kandy Floss</h4>
+                      <span class="coming-pill">Coming to Ecosystem</span>
+                    </div>
+                    <p>Ultra-soft breathable kids' innerwear engineered for sensitive skin, all-day play, and playful colourways.</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- =========================================================
+         WORLD 2: AMUL MACHO — WARM HERITAGE ("BADE AARAM SE")
+         ========================================================= -->
+    <section class="world-view" data-world="macho" aria-label="Macho World" hidden>
+      <!-- 1. Bounded Split Heritage Hero (Crisp Clarity, Zero Full-Bleed Wash) -->
+      <div class="flagship-hero-section container">
+        <div class="split-hero-card split-hero-macho" id="macho-hero-stage">
+          <div class="split-hero-copy">
+            <div class="hero-brand-logo-wrap">
+              <img src="./Images/logo_macho.png" alt="Amul Macho logo" class="hero-brand-logo-img" width="215" height="24">
+            </div>
+            <p class="eyebrow" id="macho-hero-eyebrow">EVERYDAY · BADE AARAM SE</p>
+            <h1 class="hero-title" id="macho-hero-title">Iconic Ease.<br>Unbroken Command.</h1>
+            <p class="hero-desc" id="macho-hero-desc">Extra-long-staple 100% super-combed cotton trunks, vests, and briefs engineered for India's longest workdays.</p>
+            <div class="hero-cta-row">
+              <a class="btn-primary" href="#macho-catalog">Shop Essentials <span class="btn-arrow-circle" aria-hidden="true">&#8599;</span></a>
+              <a class="btn-ghost" href="#macho-pack-builder">Build 5-Pack Box <span class="btn-arrow-circle" aria-hidden="true">&#8599;</span></a>
+            </div>
+            <div class="hero-controls-bar split-hero-controls" role="group" aria-label="Macho hero slide controls">
+              <div class="hero-dots" id="macho-hero-dots">
+                <button type="button" class="hero-dot" data-macho-slide="0" aria-label="Macho Slide 1 of 3" aria-current="true"></button>
+                <button type="button" class="hero-dot" data-macho-slide="1" aria-label="Macho Slide 2 of 3" aria-current="false"></button>
+                <button type="button" class="hero-dot" data-macho-slide="2" aria-label="Macho Slide 3 of 3" aria-current="false"></button>
+              </div>
+              <button type="button" class="carousel-ctrl-btn ctrl-light" id="macho-hero-prev" aria-label="Previous Macho slide">&larr;</button>
+              <button type="button" class="carousel-ctrl-btn ctrl-light" id="macho-hero-next" aria-label="Next Macho slide">&rarr;</button>
+            </div>
+          </div>
+          <div class="hero-split-frame">
+            <img id="macho-hero-img" src="./Images/macho.webp" alt="Amul Macho heritage signature cotton trunks" class="model-photo" width="760" height="950">
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. 3D Perspective Lookbook Deck (Shop Macho by Category) -->
+      <section class="section container" id="macho-category-deck" aria-labelledby="macho-deck-heading">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">AMUL MACHO ARCHIVE · INTERACTIVE LOOKBOOK</p>
+            <h2 class="section-title" id="macho-deck-heading">Shop Macho by Category</h2>
+          </div>
+          <p class="section-subtitle">Hover, click, or swipe any card in the 3D lookbook deck to bring a silhouette forward and explore the lineup.</p>
+        </div>
+
+        <div class="macho-deck-shell">
+          <div class="macho-deck-stage" id="macho-deck-stage" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Shop Macho by Category 3D Deck">
+            <button type="button" class="macho-deck-nav is-prev" id="macho-deck-prev" aria-label="Previous Macho category">
+              <span aria-hidden="true">&#8592;</span>
+            </button>
+
+            <div class="macho-deck-track" id="macho-deck-track">
+              <article class="macho-deck-card" data-deck-idx="0" data-macho-cat="Trunks" data-offset="-2">
+                <img src="./Images/macho.webp" alt="Amul Macho Trunks — Combed Cotton · Zero-Roll" class="model-photo macho-deck-photo" width="480" height="600" loading="lazy">
+                <div class="macho-deck-scrim" aria-hidden="true"></div>
+                <span class="macho-deck-side-pill">Trunks</span>
+                <div class="macho-deck-overlay">
+                  <span class="macho-deck-kicker">01 · HERITAGE FIT</span>
+                  <h3 class="macho-deck-title">Trunks</h3>
+                  <p class="macho-deck-desc">Combed Cotton · Zero-Roll</p>
+                  <button type="button" class="macho-deck-cta" data-deck-shop="Trunks">Shop now <span aria-hidden="true">&#8599;</span></button>
+                </div>
+              </article>
+
+              <article class="macho-deck-card" data-deck-idx="1" data-macho-cat="Briefs" data-offset="-1">
+                <img src="./Images/macho-brief.webp" alt="Amul Macho Briefs — Contour Pouch · Everyday Fit" class="model-photo macho-deck-photo" width="480" height="600" loading="lazy">
+                <div class="macho-deck-scrim" aria-hidden="true"></div>
+                <span class="macho-deck-side-pill">Briefs</span>
+                <div class="macho-deck-overlay">
+                  <span class="macho-deck-kicker">02 · ALL-DAY SUPPORT</span>
+                  <h3 class="macho-deck-title">Briefs</h3>
+                  <p class="macho-deck-desc">Contour Pouch · Everyday Fit</p>
+                  <button type="button" class="macho-deck-cta" data-deck-shop="Briefs">Shop now <span aria-hidden="true">&#8599;</span></button>
+                </div>
+              </article>
+
+              <article class="macho-deck-card is-center" data-deck-idx="2" data-macho-cat="Vests" data-offset="0" aria-current="true">
+                <img src="./Images/macho_vests.webp" alt="Amul Macho Vests — Ribbed Classic · All-Season" class="model-photo macho-deck-photo" width="480" height="600" loading="lazy">
+                <div class="macho-deck-scrim" aria-hidden="true"></div>
+                <span class="macho-deck-side-pill">Vests</span>
+                <div class="macho-deck-overlay">
+                  <span class="macho-deck-kicker">03 · CORE LAYER</span>
+                  <h3 class="macho-deck-title">Vests</h3>
+                  <p class="macho-deck-desc">Ribbed Classic · All-Season</p>
+                  <button type="button" class="macho-deck-cta" data-deck-shop="Vests">Shop now <span aria-hidden="true">&#8599;</span></button>
+                </div>
+              </article>
+
+              <article class="macho-deck-card" data-deck-idx="3" data-macho-cat="Lounge Boxers" data-offset="1">
+                <img src="./Images/macho_brief_charcoal.jpg" alt="Amul Macho Lounge Boxers — Woven Cotton · Relaxed Cut" class="model-photo macho-deck-photo" width="480" height="600" loading="lazy">
+                <div class="macho-deck-scrim" aria-hidden="true"></div>
+                <span class="macho-deck-side-pill">Lounge Boxers</span>
+                <div class="macho-deck-overlay">
+                  <span class="macho-deck-kicker">04 · AFTER HOURS</span>
+                  <h3 class="macho-deck-title">Lounge Boxers</h3>
+                  <p class="macho-deck-desc">Woven Cotton · Relaxed Cut</p>
+                  <button type="button" class="macho-deck-cta" data-deck-shop="Lounge Boxers">Shop now <span aria-hidden="true">&#8599;</span></button>
+                </div>
+              </article>
+
+              <article class="macho-deck-card" data-deck-idx="4" data-macho-cat="Value Packs" data-offset="2">
+                <img src="./Images/macho-combo.webp" alt="Amul Macho Value Packs — 3-Pack &amp; 5-Pack Combos" class="model-photo macho-deck-photo" width="480" height="600" loading="lazy">
+                <div class="macho-deck-scrim" aria-hidden="true"></div>
+                <span class="macho-deck-side-pill">Value Packs</span>
+                <div class="macho-deck-overlay">
+                  <span class="macho-deck-kicker">05 · COLLECTOR EDIT</span>
+                  <h3 class="macho-deck-title">Value Packs</h3>
+                  <p class="macho-deck-desc">3-Pack &amp; 5-Pack Combos</p>
+                  <button type="button" class="macho-deck-cta" data-deck-shop="Value Packs">Shop now <span aria-hidden="true">&#8599;</span></button>
+                </div>
+              </article>
+            </div>
+
+            <button type="button" class="macho-deck-nav is-next" id="macho-deck-next" aria-label="Next Macho category">
+              <span aria-hidden="true">&#8594;</span>
+            </button>
+          </div>
+
+          <div class="macho-deck-dots" id="macho-deck-dots" role="tablist" aria-label="Select Macho category card">
+            <button type="button" class="macho-deck-dot" data-deck-dot="0" aria-label="Focus Trunks" aria-selected="false">Trunks</button>
+            <button type="button" class="macho-deck-dot" data-deck-dot="1" aria-label="Focus Briefs" aria-selected="false">Briefs</button>
+            <button type="button" class="macho-deck-dot is-active" data-deck-dot="2" aria-label="Focus Vests" aria-selected="true">Vests</button>
+            <button type="button" class="macho-deck-dot" data-deck-dot="3" aria-label="Focus Lounge Boxers" aria-selected="false">Lounge Boxers</button>
+            <button type="button" class="macho-deck-dot" data-deck-dot="4" aria-label="Focus Value Packs" aria-selected="false">Value Packs</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. Built for Everyday Ease: 3-Tab Spec Showcase -->
+      <section class="section container" id="macho-spec-showcase" aria-labelledby="macho-ease-heading">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">ANATOMY OF EVERYDAY POISE</p>
+            <h2 class="section-title" id="macho-ease-heading">Built for Everyday Ease</h2>
+          </div>
+          <p class="section-subtitle">Select an engineering pillar below to inspect Amul Macho's Tirupur yarn purity, waistband stability, and breathable contour metrics.</p>
+        </div>
+
+        <div class="macho-ease-shell">
+          <div class="macho-ease-tabs" role="tablist" aria-label="Amul Macho engineering pillars" id="macho-spec-tabs">
+            <button type="button" role="tab" class="macho-ease-pill is-active" data-macho-tab="0" aria-selected="true">01 &middot; Super-Combed Cotton</button>
+            <button type="button" role="tab" class="macho-ease-pill" data-macho-tab="1" aria-selected="false">02 &middot; Jacquard Waistband</button>
+            <button type="button" role="tab" class="macho-ease-pill" data-macho-tab="2" aria-selected="false">03 &middot; Contoured All-Day Fit</button>
+          </div>
+
+          <div class="macho-ease-grid">
+            <div class="macho-ease-visual">
+              <img id="macho-spec-img" src="./Images/macho_vests.webp" alt="Amul Macho 100% Super-Combed Cotton vest" class="model-photo" width="760" height="960" loading="lazy">
+              <span class="macho-spec-visual-badge" id="macho-spec-badge">01 · FIBER PURITY</span>
+            </div>
+
+            <div class="macho-ease-details">
+              <p class="eyebrow" id="macho-spec-kicker">01 · TIRUPUR COMBED YARN</p>
+              <h3 class="macho-spec-heading" id="macho-spec-title">100% Super-Combed Cotton</h3>
+              <p class="macho-spec-copy" id="macho-spec-desc">Long-staple yarns combed in our Tirupur mills remove short lint fibers for whisper-smooth skin feel and high-humidity airflow across 14-hour days.</p>
+
+              <div class="spec-telemetry-list" aria-label="Comfort telemetry scores">
+                <div class="spec-telemetry-item">
+                  <div class="spec-telemetry-head">
+                    <span>Softness Index</span>
+                    <strong id="macho-score-soft">96 / 100</strong>
+                  </div>
+                  <div class="spec-meter-track">
+                    <div class="spec-meter-fill is-macho" id="macho-bar-soft" style="width: 96%;"></div>
+                  </div>
+                </div>
+
+                <div class="spec-telemetry-item">
+                  <div class="spec-telemetry-head">
+                    <span>Waist Grip Stability</span>
+                    <strong id="macho-score-grip">91 / 100</strong>
+                  </div>
+                  <div class="spec-meter-track">
+                    <div class="spec-meter-fill is-macho" id="macho-bar-grip" style="width: 91%;"></div>
+                  </div>
+                </div>
+
+                <div class="spec-telemetry-item">
+                  <div class="spec-telemetry-head">
+                    <span>All-Day Breathability</span>
+                    <strong id="macho-score-breath">97 / 100</strong>
+                  </div>
+                  <div class="spec-meter-track">
+                    <div class="spec-meter-fill is-macho" id="macho-bar-breath" style="width: 97%;"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="macho-spec-footer">
+                <button type="button" class="btn-primary" id="macho-spec-shop-btn">Shop Matching Essentials <span class="btn-arrow-circle" aria-hidden="true">&#8599;</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. Light-Mode "Pack Your Box" Collector Studio -->
+      <section class="section container" id="macho-pack-builder" aria-labelledby="pack-builder-heading">
+        <div class="pack-builder-shell">
+          <div class="pack-builder-info">
+            <p class="eyebrow">CUSTOM CURATED COLLECTOR STUDIO</p>
+            <h2 class="section-title" id="pack-builder-heading">Pack Your Collector's Box</h2>
+            <p class="section-subtitle">Click any Amul Macho essential below to drop it into your 5-slot collector box and unlock automatic tiered savings.</p>
+
+            <div class="pack-progress-panel">
+              <div class="pack-progress-top">
+                <span id="pack-tier-status">Add 3 items for 10% OFF · 5 items for 20% OFF + Free Express</span>
+                <strong id="pack-slot-count">0 / 5 Slots</strong>
+              </div>
+              <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="5" aria-valuenow="0" id="pack-progress-bar">
+                <div class="progress-fill" id="pack-progress-fill"></div>
+              </div>
+              <div class="pack-milestones">
+                <span data-milestone="3">3 Items &rarr; 10% OFF</span>
+                <span data-milestone="5">5 Items &rarr; 20% OFF + Free Express Shipping</span>
+              </div>
+            </div>
+
+            <div class="pack-picker-list" id="pack-picker-list" aria-label="Items you can add to your box"></div>
+          </div>
+
+          <div class="pack-box-stage">
+            <div class="collector-box">
+              <div class="collector-box-lid">
+                <span class="box-logo-plate">
+                  <img src="./Images/logo_macho.png" alt="Amul Macho" class="box-brand-logo-img" width="219" height="25">
+                </span>
+                <span class="box-edition-tag">HERITAGE COLLECTOR STUDIO · 5 SLOTS</span>
+              </div>
+
+              <div class="collector-slots" id="collector-slots" aria-label="5 collector box slots"></div>
+
+              <div class="collector-box-footer">
+                <div class="box-pricing-summary">
+                  <div class="box-price-line">
+                    <span>Box Value</span>
+                    <span id="pack-subtotal">&#8377;0</span>
+                  </div>
+                  <div class="box-price-line box-discount-line">
+                    <span>Bundle Discount (<span id="pack-discount-pct">0%</span>)</span>
+                    <span id="pack-discount-amt">-&#8377;0</span>
+                  </div>
+                  <div class="box-price-line box-total-line">
+                    <span>Final Box Price</span>
+                    <strong id="pack-total">&#8377;0</strong>
+                  </div>
+                </div>
+                <div class="box-cta-actions">
+                  <button type="button" class="btn-primary btn-full" id="add-box-to-cart-btn" disabled>Add Custom Box to Bag <span class="btn-arrow-circle" aria-hidden="true">&#8599;</span></button>
+                  <button type="button" class="btn-ghost-sm" id="clear-box-btn">Reset Box</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. Avatar-Pill Product Grid + Motion Banner + Trust Strip -->
+      <section class="section container" id="macho-catalog" aria-labelledby="macho-grid-heading">
+        <div class="section-head section-head-stacked">
+          <div class="catalog-action-row">
+            <div>
+              <p class="eyebrow">BADE AARAM SE COLLECTION</p>
+              <h2 class="section-title" id="macho-grid-heading">Macho Everyday Lineup</h2>
+            </div>
+            <button type="button" class="btn-ghost-sm find-fit-btn" data-open-fit-finder aria-haspopup="dialog">Find My Perfect Size <span class="btn-arrow-circle" aria-hidden="true">&#8599;</span></button>
+          </div>
+
+          <div class="avatar-filter-bar" role="group" aria-label="Filter Macho essentials" id="macho-pill-filters">
+            <button type="button" class="avatar-pill" data-macho-filter="All" aria-pressed="true">
+              <img src="./Images/macho.webp" alt="" class="avatar-pill-thumb" width="24" height="24">
+              <span>All Edit</span>
+            </button>
+            <button type="button" class="avatar-pill" data-macho-filter="Best Sellers" aria-pressed="false">
+              <img src="./Images/macho-combo.webp" alt="" class="avatar-pill-thumb" width="24" height="24">
+              <span>Best Sellers</span>
+            </button>
+            <button type="button" class="avatar-pill" data-macho-filter="Most Popular" aria-pressed="false">
+              <img src="./Images/macho-brief.webp" alt="" class="avatar-pill-thumb" width="24" height="24">
+              <span>Most Popular</span>
+            </button>
+            <button type="button" class="avatar-pill" data-macho-filter="Brand Choice" aria-pressed="false">
+              <img src="./Images/macho_vests.webp" alt="" class="avatar-pill-thumb" width="24" height="24">
+              <span>Brand Choice</span>
+            </button>
+            <button type="button" class="avatar-pill" data-macho-filter="Value Packs" aria-pressed="false">
+              <img src="./Images/macho_brief_charcoal.jpg" alt="" class="avatar-pill-thumb" width="24" height="24">
+              <span>Value Packs</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="catalog-active-chip-row" id="macho-subfilter-row" hidden>
+          <span class="active-subfilter-pill" id="macho-subfilter-label">Category: Vests</span>
+          <button type="button" class="btn-ghost-sm" id="macho-clear-subfilter">Clear Category &times;</button>
+        </div>
+
+        <div class="product-grid" id="macho-product-grid"></div>
+      </section>
+
+      <section class="section container" aria-label="Macho Craft Showcase">
+        <div class="motion-banner" id="macho-motion-banner">
+          <div class="motion-media">
+            <img src="./Images/macho-combo.webp" alt="Amul Macho heritage packaging and cotton comfort in motion" width="1280" height="720" loading="lazy">
+          </div>
+          <div class="motion-banner-content">
+            <div class="motion-banner-copy">
+              <p class="eyebrow">FOUR DECADES OF INDIAN CRAFT</p>
+              <h2>Woven for Real Days. Built "Bade Aaram Se".</h2>
+              <p>Tested across Tirupur yarn labs for shrink resistance, color fastness, and zero-pinch comfort.</p>
+            </div>
+            <button type="button" class="motion-toggle-pill" id="macho-motion-toggle" aria-pressed="false">&#10074;&#10074; Pause motion</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section container" aria-label="Amul Macho Guarantees">
+        <div class="trust-strip">
+          <div class="trust-grid">
+            <div class="trust-item">
+              <span class="trust-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg>
+              </span>
+              <div>
+                <h3>Engineered Everyday Fit</h3>
+                <p>Precision Indian block patterns tuned across S to XXL waistbands.</p>
+              </div>
+            </div>
+            <div class="trust-item">
+              <span class="trust-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+              </span>
+              <div>
+                <h3>Fast Free Shipping</h3>
+                <p>Complimentary express dispatch on 5-Pack boxes and bags over &#8377;999.</p>
+              </div>
+            </div>
+            <div class="trust-item">
+              <span class="trust-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+              </span>
+              <div>
+                <h3>Hassle-Free 7-Day Returns</h3>
+                <p>Instant size swap backed by Smart Fit Finder guarantee.</p>
+              </div>
+            </div>
+            <div class="trust-item">
+              <span class="trust-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              </span>
+              <div>
+                <h3>Secure UPI &amp; Card Checkout</h3>
+                <p>1-page express settlement with instant JGH Club QR points.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- =========================================================
+         WORLD 3: SPORTO — KINETIC COBALT PERFORMANCE
+         ========================================================= -->
+    <section class="world-view" data-world="sporto" aria-label="Sporto World" hidden>
+      <!-- 1. Split Kinetic Auto-Cycling Hero -->
+      <div class="flagship-hero-section container">
+        <div class="sporto-split-hero" id="sporto-hero-stage">
+          <div>
+            <div class="sporto-hero-logo-wrap">
+              <img src="./Images/logo_sporto.png" alt="Sporto official logo" class="hero-brand-logo-img" width="223" height="48">
+            </div>
+            <div class="kinetic-progress-row" role="group" aria-label="Sporto wearing occasions">
+              <button type="button" class="kinetic-progress-pill is-active" data-sporto-slide="0" aria-pressed="true">
+                <span>06:00 AM · Run</span>
+                <span class="kinetic-bar" aria-hidden="true"></span>
+              </button>
+              <button type="button" class="kinetic-progress-pill" data-sporto-slide="1" aria-pressed="false">
+                <span>07:30 AM · Gym</span>
+                <span class="kinetic-bar" aria-hidden="true"></span>
+              </button>
+              <button type="button" class="kinetic-progress-pill" data-sporto-slide="2" aria-pressed="false">
+                <span>05:00 PM · Street Athleisure</span>
+                <span class="kinetic-bar" aria-hidden="true"></span>
+              </button>
+            </div>
+
+            <p class="eyebrow" id="sporto-hero-eyebrow">06:00 AM · DAWN RUN EDIT</p>
+            <h1 class="hero-title" id="sporto-hero-title">DAWN PACE.<br>ZERO DRAG.</h1>
+            <p class="hero-desc" id="sporto-hero-desc">Micro-perforated Instacool mesh sheds skin moisture 45% faster through road sprints and high-humidity sessions.</p>
+
+            <div class="hero-cta-row">
+              <button type="button" class="btn-primary" id="sporto-explore-cta">Explore Gear <span class="btn-arrow-circle" aria-hidden="true">&#8599;</span></button>
+              <a class="btn-ghost" href="#sporto-velocity-sim">Velocity Lab <span class="btn-arrow-circle" aria-hidden="true">&#8599;</span></a>
+            </div>
+
+            <div class="sporto-split-controls" role="group" aria-label="Sporto hero controls">
+              <button type="button" class="carousel-ctrl-btn ctrl-light" id="sporto-hero-prev" aria-label="Previous Sporto slide">&larr;</button>
+              <button type="button" class="carousel-ctrl-btn ctrl-light" id="sporto-hero-next" aria-label="Next Sporto slide">&rarr;</button>
+            </div>
+          </div>
+
+          <div class="sporto-hero-frame" id="sporto-hero-frame">
+            <img id="sporto-hero-img" src="./Images/sporto_t-shirt.webp" alt="Sporto Instacool activewear tee" class="model-photo" width="900" height="1125">
+            <span class="hero-mood-pill" id="sporto-hero-pill">INSTACOOL · 4-WAY STRETCH</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Scroll-Linked Horizontal "Shop by Activity" Rail -->
+      <section class="section container" id="sporto-activity-rail-sec" aria-labelledby="sporto-rail-heading">
+        <div class="rail-layout">
+          <div class="rail-sticky-col">
+            <p class="eyebrow">TRAINING DISCIPLINES</p>
+            <h2 class="section-title" id="sporto-rail-heading">Shop by Activity</h2>
+            <p class="section-subtitle">Swipe or scroll the rail to target silhouettes engineered for your daily training intensity.</p>
+            <div>
+              <button type="button" class="btn-primary btn-sm" data-sporto-rail-explore>Explore Activities <span class="btn-arrow-circle" aria-hidden="true">&#8599;</span></button>
+            </div>
+            <div class="rail-nav-btns" role="group" aria-label="Scroll activity rail">
+              <button type="button" class="carousel-ctrl-btn ctrl-light" id="sporto-rail-prev" aria-label="Scroll activities left">&larr;</button>
+              <button type="button" class="carousel-ctrl-btn ctrl-light" id="sporto-rail-next" aria-label="Scroll activities right">&rarr;</button>
+            </div>
+          </div>
+
+          <div class="rail-track" id="sporto-rail-track" tabindex="0" role="region" aria-label="Sporto activities carousel">
+            <button type="button" class="rail-card" data-rail-activity="Gym">
+              <img src="./Images/sporto_gymvests3.webp" alt="Sporto Gym training vests" class="model-photo" width="600" height="800" loading="lazy">
+              <span class="rail-card-pill">Gym</span>
+            </button>
+            <button type="button" class="rail-card" data-rail-activity="Running">
+              <img src="./Images/sporto_t-shirt3.webp" alt="Sporto Running active mesh tees" class="model-photo" width="600" height="800" loading="lazy">
+              <span class="rail-card-pill">Running</span>
+            </button>
+            <button type="button" class="rail-card" data-rail-activity="Athleisure">
+              <img src="./Images/sporto_track.webp" alt="Sporto Athleisure track pants" class="model-photo" width="600" height="800" loading="lazy">
+              <span class="rail-card-pill">Athleisure</span>
+            </button>
+            <button type="button" class="rail-card" data-rail-activity="Recovery">
+              <img src="./Images/sporto_vests.webp" alt="Sporto Recovery combed cotton vests" class="model-photo" width="600" height="800" loading="lazy">
+              <span class="rail-card-pill">Recovery</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. Velocity Lab · Workout Condition Simulator -->
+      <section class="section container" id="sporto-velocity-sim" aria-labelledby="sporto-tech-heading">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">VELOCITY LAB · TELEMETRY CALIBRATION</p>
+            <h2 class="section-title" id="sporto-tech-heading">Condition Simulator</h2>
+          </div>
+          <p class="section-subtitle">Select your training environment to see live textile telemetry and deploy a matched 2-piece Sporto performance kit.</p>
+        </div>
+
+        <div class="sporto-sim-shell">
+          <div class="sporto-env-pills" role="tablist" aria-label="Training environment conditions" id="sporto-sim-tabs">
+            <button type="button" role="tab" class="sporto-env-pill is-active" data-sporto-env="0" aria-selected="true">Coastal Humidity Run</button>
+            <button type="button" role="tab" class="sporto-env-pill" data-sporto-env="1" aria-selected="false">Heavy Barbell Session</button>
+            <button type="button" role="tab" class="sporto-env-pill" data-sporto-env="2" aria-selected="false">All-Day Street Travel</button>
+          </div>
+
+          <div class="sporto-sim-grid">
+            <div class="sporto-telemetry-panel">
+              <div class="sporto-telemetry-banner">
+                <span class="sporto-env-badge" id="sporto-sim-badge">ENVIRONMENT 01 · 82% RH TROPICAL RUN</span>
+                <h3 id="sporto-sim-title">Coastal Humidity Run Profile</h3>
+                <p id="sporto-sim-desc">High-airflow micro-perforated knit sheds perspiration rapidly before damp cling can slow your stride cadence.</p>
+              </div>
+
+              <div class="spec-telemetry-list" aria-label="Sporto condition performance meters">
+                <div class="spec-telemetry-item">
+                  <div class="spec-telemetry-head">
+                    <span>Moisture Evaporation Rate</span>
+                    <strong id="sporto-m-evap">97%</strong>
+                  </div>
+                  <div class="spec-meter-track is-cobalt">
+                    <div class="spec-meter-fill is-cobalt" id="sporto-bar-evap" style="width: 97%;"></div>
+                  </div>
+                </div>
+
+                <div class="spec-telemetry-item">
+                  <div class="spec-telemetry-head">
+                    <span>4-Way Knit Recovery</span>
+                    <strong id="sporto-m-recovery">94%</strong>
+                  </div>
+                  <div class="spec-meter-track is-cobalt">
+                    <div class="spec-meter-fill is-cobalt" id="sporto-bar-recovery" style="width: 94%;"></div>
+                  </div>
+                </div>
+
+                <div class="spec-telemetry-item">
+                  <div class="spec-telemetry-head">
+                    <span>Shapelock Waistband Hold</span>
+                    <strong id="sporto-m-hold">92%</strong>
+                  </div>
+                  <div class="spec-meter-track is-cobalt">
+                    <div class="spec-meter-fill is-cobalt" id="sporto-bar-hold" style="width: 92%;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <article class="sporto-kit-card" id="sporto-kit-card" aria-live="polite">
+              <div class="sporto-kit-head">
+                <div>
+                  <span class="product-cat">RECOMMENDED 2-PIECE OUTFIT</span>
+                  <h3 id="sporto-kit-heading">Dawn Pace Sprint Kit</h3>
+                </div>
+                <div class="sporto-kit-total">
+                  <span id="sporto-kit-price">&#8377;1,070</span>
+                  <small>Complete Kit</small>
+                </div>
+              </div>
+
+              <div class="sporto-kit-thumbs">
+                <div class="sporto-kit-piece">
+                  <div class="sporto-kit-photo">
+                    <img id="sporto-kit-img-1" src="./Images/sporto_t-shirt.webp" alt="Instacool Active Mesh Tee" class="model-photo" width="140" height="175" loading="lazy">
+                  </div>
+                  <div class="sporto-kit-meta">
+                    <span class="kit-piece-slot">UPPER</span>
+                    <strong id="sporto-kit-name-1">Instacool Active Mesh Tee</strong>
+                    <span class="kit-piece-price" id="sporto-kit-price-1">&#8377;431</span>
+                  </div>
+                </div>
+
+                <div class="sporto-kit-piece">
+                  <div class="sporto-kit-photo">
+                    <img id="sporto-kit-img-2" src="./Images/sporto_track.webp" alt="Velocity Side-Stripe Track Pants" class="model-photo" width="140" height="175" loading="lazy">
+                  </div>
+                  <div class="sporto-kit-meta">
+                    <span class="kit-piece-slot">LOWER</span>
+                    <strong id="sporto-kit-name-2">Velocity Side-Stripe Track Pants</strong>
+                    <span class="kit-piece-price" id="sporto-kit-price-2">&#8377;639</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="sporto-kit-controls">
+                <div class="sporto-kit-size-wrap">
+                  <span class="product-cat">Select Kit Size</span>
+                  <div class="size-row" id="sporto-sim-sizes"></div>
+                </div>
+                <button type="button" class="btn-primary btn-full" id="sporto-sim-add-btn">Add Training Kit to Bag <span class="btn-arrow-circle" aria-hidden="true">&#8599;</span></button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. Avatar-Pill Product Grid + Motion Banner + Trust Strip -->
+      <section class="section container" id="sporto-catalog" aria-labelledby="sporto-grid-heading">
+        <div class="section-head section-head-stacked">
+          <div class="catalog-action-row">
+            <div>
+              <p class="eyebrow">PERFORMANCE CATALOG</p>
+              <h2 class="section-title" id="sporto-grid-heading">Kinetic Gear Lineup</h2>
+            </div>
+            <button type="button" class="btn-ghost-sm find-fit-btn" data-open-fit-finder aria-haspopup="dialog">Find My Perfect Size <span class="btn-arrow-circle" aria-hidden="true">&#8599;</span></button>
+          </div>
+
+          <div class="avatar-filter-bar" role="group" aria-label="Filter Sporto gear" id="sporto-activity-filters">
+            <button type="button" class="avatar-pill" data-activity="All" aria-pressed="true">
+              <img src="./Images/sporto_t-shirt.webp" alt="" class="avatar-pill-thumb" width="24" height="24">
+              <span>All Gear</span>
+            </button>
+            <button type="button" class="avatar-pill" data-activity="Best Sellers" aria-pressed="false">
+              <img src="./Images/sporto_gymvests4.webp" alt="" class="avatar-pill-thumb" width="24" height="24">
+              <span>Best Sellers</span>
+            </button>
+            <button type="button" class="avatar-pill" data-activity="Gym Gear" aria-pressed="false">
+              <img src="./Images/sporto_gymvests3.webp" alt="" class="avatar-pill-thumb" width="24" height="24">
+              <span>Gym Gear</span>
+            </button>
+            <button type="button" class="avatar-pill" data-activity="Running" aria-pressed="false">
+              <img src="./Images/sporto_t-shirt3.webp" alt="" class="avatar-pill-thumb" width="24" height="24">
+              <span>Running</span>
+            </button>
+            <button type="button" class="avatar-pill" data-activity="Value Packs" aria-pressed="false">
+              <img src="./Images/sporto_vests.webp" alt="" class="avatar-pill-thumb" width="24" height="24">
+              <span>Value Packs</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="catalog-active-chip-row" id="sporto-subfilter-row" hidden>
+          <span class="active-subfilter-pill" id="sporto-subfilter-label">Activity: Gym</span>
+          <button type="button" class="btn-ghost-sm" id="sporto-clear-subfilter">Show All Gear &times;</button>
+        </div>
+
+        <div class="product-grid" id="sporto-product-grid"></div>
+      </section>
+
+      <section class="section container" aria-label="Sporto Kinetic Motion Banner">
+        <div class="motion-banner" id="sporto-motion-banner">
+          <div class="motion-media">
+            <img src="./Images/sporto_t-shirt4.webp" alt="Sporto performance athlete in motion" width="1280" height="720" loading="lazy">
+          </div>
+          <div class="motion-banner-content">
+            <div class="motion-banner-copy">
+              <p class="eyebrow">KHELTE RAHO · ZERO LIMITS</p>
+              <h2>Built for Early Starts and Extra Sets.</h2>
+              <p>Featherweight Instacool knits pair dry-touch airflow with street-ready cobalt aesthetics.</p>
+            </div>
+            <button type="button" class="motion-toggle-pill" id="sporto-motion-toggle" aria-pressed="false">&#10074;&#10074; Pause motion</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section container" aria-label="Sporto Guarantees">
+        <div class="trust-strip">
+          <div class="trust-grid">
+            <div class="trust-item">
+              <span class="trust-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg>
+              </span>
+              <div>
+                <h3>Engineered Everyday Fit</h3>
+                <p>4-Way Stretch ergonomic paneling across training and recovery sizes.</p>
+              </div>
+            </div>
+            <div class="trust-item">
+              <span class="trust-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+              </span>
+              <div>
+                <h3>Fast Free Shipping</h3>
+                <p>Same-day Bengaluru &amp; Tirupur fulfillment free above &#8377;999.</p>
+              </div>
+            </div>
+            <div class="trust-item">
+              <span class="trust-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+              </span>
+              <div>
+                <h3>Hassle-Free 7-Day Returns</h3>
+                <p>Effortless size exchange with instant doorstep pickup.</p>
+              </div>
+            </div>
+            <div class="trust-item">
+              <span class="trust-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              </span>
+              <div>
+                <h3>Secure UPI &amp; Card Checkout</h3>
+                <p>Instant UPI settlement &amp; unified loyalty rewards.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- =========================================================
+         WORLD 4: ZOIRO — QUIET-LUXURY EDITORIAL ATELIER
+         ========================================================= -->
+    <section class="world-view" data-world="zoiro" aria-label="Zoiro World" hidden>
+      <!-- 1. Bounded Split Editorial Hero (Crisp Clarity, Zero Full-Bleed Wash) -->
+      <div class="flagship-hero-section container">
+        <div class="split-hero-card split-hero-zoiro" id="zoiro-hero-stage">
+          <div class="split-hero-copy">
+            <div class="hero-brand-logo-wrap">
+              <img src="./Images/logo_zoiro.png" alt="Zoiro official logo" class="hero-brand-logo-img" width="138" height="32">
+            </div>
+            <p class="eyebrow" id="zoiro-hero-eyebrow">LOUNGE · REST MEETS RELAXED MOTION</p>
+            <h1 class="hero-title" id="zoiro-hero-title">Quiet Poise.<br>Weightless Drape.</h1>
+            <p class="hero-desc" id="zoiro-hero-desc">Beechwood-derived Micro-Modal and long-staple cotton tailored for calm evenings, uninterrupted rest, and resort transitions.</p>
+            <div class="hero-cta-row">
+              <button type="button" class="btn-primary" id="zoiro-hero-shop-btn">Shop collection <span class="btn-arrow-circle" aria-hidden="true">&#8599;</span></button>
+              <a class="btn-ghost" href="#zoiro-fabric-lab">Fabric Lab <span class="btn-arrow-circle" aria-hidden="true">&#8599;</span></a>
+            </div>
+            <div class="hero-controls-bar split-hero-controls" role="group" aria-label="Zoiro hero slide controls">
+              <div class="hero-dots" id="zoiro-hero-dots">
+                <button type="button" class="hero-dot" data-zoiro-slide="0" aria-label="Zoiro Slide 1 of 3" aria-current="true"></button>
+                <button type="button" class="hero-dot" data-zoiro-slide="1" aria-label="Zoiro Slide 2 of 3" aria-current="false"></button>
+                <button type="button" class="hero-dot" data-zoiro-slide="2" aria-label="Zoiro Slide 3 of 3" aria-current="false"></button>
+              </div>
+              <button type="button" class="carousel-ctrl-btn ctrl-light" id="zoiro-hero-prev" aria-label="Previous Zoiro slide">&larr;</button>
+              <button type="button" class="carousel-ctrl-btn ctrl-light" id="zoiro-hero-next" aria-label="Next Zoiro slide">&rarr;</button>
+            </div>
+          </div>
+          <div class="hero-split-frame">
+            <img id="zoiro-hero-img" src="./Images/zoiro_shorts.webp" alt="Zoiro Quiet Luxury Lounge relaxation wear" class="model-photo" width="760" height="950">
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Asymmetric Editorial Silhouette Index (45% Left / 55% Right) -->
+      <section class="section container" id="zoiro-category-section" aria-labelledby="zoiro-index-heading">
+        <div class="silhouette-index-layout" id="zoiro-silhouette-index">
+          <div class="silhouette-index-col">
+            <div class="silhouette-index-head">
+              <p class="eyebrow">CURATED ATELIER ARCHIVE</p>
+              <h2 class="section-title" id="zoiro-index-heading">The Silhouette Index</h2>
+            </div>
+
+            <div class="silhouette-rows" role="listbox" aria-label="Zoiro silhouette categories">
+              <button type="button" class="silhouette-row is-active" data-silhouette-idx="0" role="option" aria-selected="true">
+                <span class="silhouette-num">01</span>
+                <span class="silhouette-row-text">
+                  <strong>Polos &amp; Tailored Knits</strong>
+                  <small>Mercerized Micro-Modal &middot; 6 Pieces</small>
+                </span>
+                <span class="silhouette-arrow" aria-hidden="true">&rarr;</span>
+              </button>
+
+              <button type="button" class="silhouette-row" data-silhouette-idx="1" role="option" aria-selected="false">
+                <span class="silhouette-num">02</span>
+                <span class="silhouette-row-text">
+                  <strong>Refined Track &amp; Active Pants</strong>
+                  <small>4-Way Drape &middot; 5 Pieces</small>
+                </span>
+                <span class="silhouette-arrow" aria-hidden="true">&rarr;</span>
+              </button>
+
+              <button type="button" class="silhouette-row" data-silhouette-idx="2" role="option" aria-selected="false">
+                <span class="silhouette-num">03</span>
+                <span class="silhouette-row-text">
+                  <strong>Transit &amp; Travel Overshirts</strong>
+                  <small>Zero-Crease Layering &middot; 2 Pieces</small>
+                </span>
+                <span class="silhouette-arrow" aria-hidden="true">&rarr;</span>
+              </button>
+
+              <button type="button" class="silhouette-row" data-silhouette-idx="3" role="option" aria-selected="false">
+                <span class="silhouette-num">04</span>
+                <span class="silhouette-row-text">
+                  <strong>Second-Skin Micro-Modal Trunks</strong>
+                  <small>Featherweight Weave &middot; 3 Pieces</small>
+                </span>
+                <span class="silhouette-arrow" aria-hidden="true">&rarr;</span>
+              </button>
+
+              <button type="button" class="silhouette-row" data-silhouette-idx="4" role="option" aria-selected="false">
+                <span class="silhouette-num">05</span>
+                <span class="silhouette-row-text">
+                  <strong>Resort &amp; Lounge Shorts</strong>
+                  <small>Breathable Interlock &middot; 2 Pieces</small>
+                </span>
+                <span class="silhouette-arrow" aria-hidden="true">&rarr;</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="silhouette-stage-col">
+            <div class="silhouette-preview-frame">
+              <img id="silhouette-img-a" src="./Images/zoiro_polo2.webp" alt="Polos & Tailored Knits editorial preview" class="silhouette-img is-visible" width="820" height="980" loading="lazy">
+              <img id="silhouette-img-b" src="./Images/zoiro_trakpants2.webp" alt="" class="silhouette-img" width="820" height="980" loading="lazy" aria-hidden="true">
+
+              <div class="silhouette-caption-glass" aria-live="polite">
+                <div class="silhouette-caption-meta">
+                  <div class="silhouette-meta-pair">
+                    <span>Fabric Weight</span>
+                    <strong id="silhouette-weight">210 GSM Mercerized Modal</strong>
+                  </div>
+                  <div class="silhouette-meta-pair">
+                    <span>Occasion</span>
+                    <strong id="silhouette-occasion">Executive Work &amp; Evening</strong>
+                  </div>
+                </div>
+                <button type="button" class="btn-primary btn-sm silhouette-view-btn" id="silhouette-view-btn">View Edit <span class="btn-arrow-circle" aria-hidden="true">&#8599;</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. Interactive Micro-Modal Split Curtain -->
+      <section class="section container" id="zoiro-fabric-lab" aria-labelledby="fabric-lab-heading">
+        <div class="fabric-lab-panel">
+          <div class="fabric-lab-head">
+            <div>
+              <p class="eyebrow">ZOIRO TEXTILE ENGINEERING</p>
+              <h2 class="section-title" id="fabric-lab-heading">Interactive Micro-Modal Split Curtain</h2>
+            </div>
+            <p class="section-subtitle">Drag the atelier divider to compare everyday <strong>Conventional Cotton</strong> against <strong>Zoiro Micro-Modal</strong> in real time.</p>
+          </div>
+
+          <div class="fabric-lab-grid">
+            <div class="fabric-compare-stage" id="fabric-compare-stage" style="--split: 50%;">
+              <!-- Base layer (Right side: Zoiro Micro-Modal) -->
+              <div class="compare-layer compare-right">
+                <img src="./Images/zoiro_shorts.webp" alt="Zoiro Micro-Modal fluid luxury drape" class="model-photo" width="900" height="1080" loading="lazy">
+                <div class="compare-badge compare-badge-right">
+                  <span class="compare-tag">ZOIRO MICRO-MODAL</span>
+                  <strong>3x Softer &middot; Zero-Crease Drape</strong>
+                </div>
+              </div>
+
+              <!-- Clipped layer (Left side: Conventional Cotton) -->
+              <div class="compare-layer compare-left" id="fabric-compare-left">
+                <img src="./Images/zoiro_t-shirt.webp" alt="Conventional cotton baseline textile texture" class="model-photo compare-mono" width="900" height="1080" loading="lazy">
+                <div class="compare-badge compare-badge-left">
+                  <span class="compare-tag">CONVENTIONAL COTTON</span>
+                  <strong>Standard Everyday Weave</strong>
+                </div>
+              </div>
+
+              <div class="compare-divider" id="fabric-compare-divider" aria-hidden="true">
+                <span class="compare-handle">&harr;</span>
+              </div>
+
+              <label class="sr-only" for="fabric-split-range">Compare Conventional Cotton vs Zoiro Micro-Modal</label>
+              <input
+                type="range"
+                id="fabric-split-range"
+                class="compare-range-input"
+                min="8"
+                max="92"
+                value="50"
+                aria-valuetext="50% Conventional Cotton vs 50% Zoiro Micro-Modal"
+              >
+            </div>
+
+            <div class="fabric-metrics-panel">
+              <div class="fabric-focus-banner" id="fabric-focus-banner">
+                <span class="focus-label">LIVE MATERIAL TELEMETRY</span>
+                <strong id="fabric-focus-title">Side-by-Side Fiber Performance</strong>
+                <p id="fabric-focus-desc">Beechwood-derived Micro-Modal fibers spin finer than silk, releasing heat 50% faster while holding effortless crease recovery across travel and evening lounge.</p>
+              </div>
+
+              <div class="metric-rows">
+                <div class="metric-row">
+                  <div class="metric-row-head">
+                    <span class="fl-spec-head">
+                      <svg class="icon-3d" width="24" height="24" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+                        <defs>
+                          <linearGradient id="svg-fl-drape-a" x1="3" y1="3" x2="25" y2="25" gradientUnits="userSpaceOnUse">
+                            <stop offset="0%" stop-color="#e8e2d5"/>
+                            <stop offset="100%" stop-color="#856b38"/>
+                          </linearGradient>
+                        </defs>
+                        <ellipse cx="14" cy="24.5" rx="8.5" ry="1.8" fill="rgba(17,17,17,0.12)"/>
+                        <path d="M5 10C9 7 12 13 16 10C20 7 23 11 23 11V20C23 20 19 17 15 20C11 23 8 18 5 20V10Z" fill="url(#svg-fl-drape-a)" fill-opacity="0.78" stroke="#856b38" stroke-width="1.2"/>
+                      </svg>
+                      <span>Drape Fluidity</span>
+                    </span>
+                    <span class="metric-values">
+                      <span class="val-cotton" id="m-drape-cotton">54%</span>
+                      <span aria-hidden="true">vs</span>
+                      <strong class="val-zoiro" id="m-drape-zoiro">97%</strong>
+                    </span>
+                  </div>
+                  <div class="dual-bar">
+                    <div class="dual-bar-base" id="bar-drape-cotton" style="width: 54%;"></div>
+                    <div class="dual-bar-zoiro" id="bar-drape-zoiro" style="width: 97%;"></div>
+                  </div>
+                </div>
+
+                <div class="metric-row">
+                  <div class="metric-row-head">
+                    <span class="fl-spec-head">
+                      <svg class="icon-3d" width="24" height="24" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+                        <defs>
+                          <linearGradient id="svg-fl-breath-a" x1="2" y1="4" x2="26" y2="24" gradientUnits="userSpaceOnUse">
+                            <stop offset="0%" stop-color="#f4efe6"/>
+                            <stop offset="100%" stop-color="#9e844e"/>
+                          </linearGradient>
+                        </defs>
+                        <ellipse cx="14" cy="24.5" rx="9" ry="1.8" fill="rgba(17,17,17,0.12)"/>
+                        <path d="M4 11L14 6L24 11L14 16L4 11Z" fill="url(#svg-fl-breath-a)" fill-opacity="0.85" stroke="#111111" stroke-opacity="0.28" stroke-width="1"/>
+                        <path d="M5 16L14 21L23 16" stroke="#9e844e" stroke-width="1.6" stroke-linecap="round"/>
+                        <path d="M8 9.5L19 14.5" stroke="#ffffff" stroke-opacity="0.8" stroke-width="1.1"/>
+                      </svg>
+                      <span>Breathability</span>
+                    </span>
+                    <span class="metric-values">
+                      <span class="val-cotton" id="m-breath-cotton">62%</span>
+                      <span aria-hidden="true">vs</span>
+                      <strong class="val-zoiro" id="m-breath-zoiro">96%</strong>
+                    </span>
+                  </div>
+                  <div class="dual-bar">
+                    <div class="dual-bar-base" id="bar-breath-cotton" style="width: 62%;"></div>
+                    <div class="dual-bar-zoiro" id="bar-breath-zoiro" style="width: 96%;"></div>
+                  </div>
+                </div>
+
+                <div class="metric-row">
+                  <div class="metric-row-head">
+                    <span class="fl-spec-head">
+                      <svg class="icon-3d" width="24" height="24" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+                        <defs>
+                          <linearGradient id="svg-fl-crease-a" x1="5" y1="4" x2="23" y2="24" gradientUnits="userSpaceOnUse">
+                            <stop offset="0%" stop-color="#e8e2d5"/>
+                            <stop offset="100%" stop-color="#856b38"/>
+                          </linearGradient>
+                        </defs>
+                        <ellipse cx="14" cy="24.5" rx="8" ry="1.8" fill="rgba(17,17,17,0.12)"/>
+                        <path d="M14 4L22 7.5V14.5C22 19 18.6 22.3 14 23.5C9.4 22.3 6 19 6 14.5V7.5L14 4Z" fill="url(#svg-fl-crease-a)" fill-opacity="0.82" stroke="#111111" stroke-opacity="0.35" stroke-width="1.1"/>
+                        <path d="M14 4L22 7.5L14 11L6 7.5L14 4Z" fill="#ffffff" fill-opacity="0.55"/>
+                      </svg>
+                      <span>Zero-Crease Recovery</span>
+                    </span>
+                    <span class="metric-values">
+                      <span class="val-cotton" id="m-crease-cotton">56%</span>
+                      <span aria-hidden="true">vs</span>
+                      <strong class="val-zoiro" id="m-crease-zoiro">98%</strong>
+                    </span>
+                  </div>
+                  <div class="dual-bar">
+                    <div class="dual-bar-base" id="bar-crease-cotton" style="width: 56%;"></div>
+                    <div class="dual-bar-zoiro" id="bar-crease-zoiro" style="width: 98%;"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="fabric-preset-btns">
+                <button type="button" class="btn-ghost-sm" data-split-preset="15">Focus Zoiro Micro-Modal</button>
+                <button type="button" class="btn-ghost-sm" data-split-preset="50">50 / 50 Split</button>
+                <button type="button" class="btn-primary btn-sm" data-split-preset="85">Focus Conventional Cotton</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. Atelier Capsule Pairing Studio -->
+      <section class="section container" id="zoiro-capsule-studio" aria-labelledby="zoiro-capsule-heading">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">QUIET-LUXURY CAPSULE BUILDER</p>
+            <h2 class="section-title" id="zoiro-capsule-heading">Atelier Capsule Pairing Studio</h2>
+          </div>
+          <p class="section-subtitle">Pair any architectural Zoiro upper garment with relaxed trousers or shorts to unlock your <strong>10% Capsule Pairing privilege</strong>.</p>
+        </div>
+
+        <div class="capsule-studio-shell">
+          <div class="capsule-selectors-col">
+            <div class="capsule-group">
+              <span class="capsule-group-label">01 &middot; SELECT UPPER PIECE</span>
+              <div class="capsule-option-row" id="zoiro-capsule-tops" role="radiogroup" aria-label="Select Zoiro top">
+                <button type="button" class="capsule-option-pill is-active" data-capsule-top="zo-polo" aria-checked="true" role="radio">
+                  <strong>Classic Executive Polo</strong>
+                  <span>&#8377;1,759</span>
+                </button>
+                <button type="button" class="capsule-option-pill" data-capsule-top="zo-overshirt" aria-checked="false" role="radio">
+                  <strong>Knit Travel Overshirt</strong>
+                  <span>&#8377;2,149</span>
+                </button>
+                <button type="button" class="capsule-option-pill" data-capsule-top="zo-tee" aria-checked="false" role="radio">
+                  <strong>Classic Crew Tee</strong>
+                  <span>&#8377;959</span>
+                </button>
+                <button type="button" class="capsule-option-pill" data-capsule-top="zo-travel-pocket-tee" aria-checked="false" role="radio">
+                  <strong>Travel Utility Tee</strong>
+                  <span>&#8377;1,299</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="capsule-group">
+              <span class="capsule-group-label">02 &middot; SELECT LOWER SILHOUETTE</span>
+              <div class="capsule-option-row" id="zoiro-capsule-bottoms" role="radiogroup" aria-label="Select Zoiro bottom">
+                <button type="button" class="capsule-option-pill is-active" data-capsule-bottom="zo-track" aria-checked="true" role="radio">
+                  <strong>All Day Track Pants</strong>
+                  <span>&#8377;1,999</span>
+                </button>
+                <button type="button" class="capsule-option-pill" data-capsule-bottom="zo-work-active-pant" aria-checked="false" role="radio">
+                  <strong>Work Active Pant</strong>
+                  <span>&#8377;2,299</span>
+                </button>
+                <button type="button" class="capsule-option-pill" data-capsule-bottom="zo-cargo-track" aria-checked="false" role="radio">
+                  <strong>Cargo Track Pant</strong>
+                  <span>&#8377;2,399</span>
+                </button>
+                <button type="button" class="capsule-option-pill" data-capsule-bottom="zo-shorts" aria-checked="false" role="radio">
+                  <strong>Soft Cotton Lounge Shorts</strong>
+                  <span>&#8377;1,759</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="capsule-group">
+              <span class="capsule-group-label">03 &middot; UNIFIED CAPSULE SIZE &amp; SHADES</span>
+              <div class="size-row" id="zoiro-capsule-sizes"></div>
+              <div class="capsule-color-controls">
+                <div class="capsule-color-group">
+                  <span class="capsule-color-caption">Upper Shade: <strong id="capsule-top-color-name">Obsidian Black</strong></span>
+                  <div class="swatch-row" id="zoiro-capsule-top-swatches"></div>
+                </div>
+                <div class="capsule-color-group">
+                  <span class="capsule-color-caption">Lower Shade: <strong id="capsule-bottom-color-name">Matte Onyx</strong></span>
+                  <div class="swatch-row" id="zoiro-capsule-bottom-swatches"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="capsule-summary-card" id="zoiro-capsule-summary" aria-live="polite">
+            <div class="capsule-pair-preview">
+              <div class="capsule-pair-tile">
+                <img id="capsule-top-img" src="./Images/zoiro_polo.webp" alt="Classic Executive Polo" class="model-photo" width="220" height="280" loading="lazy">
+                <span class="capsule-tile-tag">UPPER</span>
+              </div>
+              <div class="capsule-pair-tile">
+                <img id="capsule-bottom-img" src="./Images/zoiro_trakpants2.webp" alt="All Day Track Pants" class="model-photo" width="220" height="280" loading="lazy">
+                <span class="capsule-tile-tag">LOWER</span>
+              </div>
+            </div>
+
+            <div class="capsule-pricing-panel">
+              <p class="eyebrow" style="margin-bottom:0.25rem;" id="capsule-set-label">WORK &middot; TRANSIT CAPSULE</p>
+              <h3 class="capsule-set-title" id="capsule-set-title">Classic Executive Polo + All Day Track Pants</h3>
+
+              <div class="capsule-breakdown">
+                <div class="capsule-price-line">
+                  <span>Individual Pieces Total</span>
+                  <span id="capsule-regular-price">&#8377;3,758</span>
+                </div>
+                <div class="capsule-price-line capsule-discount-line">
+                  <span>10% Capsule Pairing Privilege</span>
+                  <span id="capsule-discount-amt">-&#8377;376</span>
+                </div>
+                <div class="capsule-price-line capsule-net-line">
+                  <span>Complete Capsule Set</span>
+                  <strong id="capsule-final-price">&#8377;3,382</strong>
+                </div>
+              </div>
+
+              <button type="button" class="btn-primary btn-full" id="zoiro-capsule-add-btn">Add Complete Capsule to Bag <span class="btn-arrow-circle" aria-hidden="true">&#8599;</span></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. Avatar-Pill Product Grid + Motion Banner + Journal + Trust Strip -->
+      <section class="section container" id="zoiro-catalog" aria-labelledby="zoiro-grid-heading">
+        <div class="section-head section-head-stacked">
+          <div class="catalog-action-row">
+            <div>
+              <p class="eyebrow">ATELIER ARCHIVE</p>
+              <h2 class="section-title" id="zoiro-grid-heading">Work &middot; Travel &middot; Play &middot; Lounge</h2>
+            </div>
+            <button type="button" class="btn-ghost-sm find-fit-btn" data-open-fit-finder aria-haspopup="dialog">Find My Perfect Size <span class="btn-arrow-circle" aria-hidden="true">&#8599;</span></button>
+          </div>
+
+          <div class="avatar-filter-bar" role="group" aria-label="Filter Zoiro collection" id="zoiro-occasion-tabs">
+            <button type="button" class="avatar-pill" data-occasion="All" aria-pressed="true">
+              <img src="./Images/zoiro_polo.webp" alt="" class="avatar-pill-thumb" width="24" height="24">
+              <span>All Edit</span>
+            </button>
+            <button type="button" class="avatar-pill" data-occasion="Best Sellers" aria-pressed="false">
+              <img src="./Images/zoiro_polo2.webp" alt="" class="avatar-pill-thumb" width="24" height="24">
+              <span>Best Sellers</span>
+            </button>
+            <button type="button" class="avatar-pill" data-occasion="Most Popular" aria-pressed="false">
+              <img src="./Images/zoiro_trakpants2.webp" alt="" class="avatar-pill-thumb" width="24" height="24">
+              <span>Most Popular</span>
+            </button>
+            <button type="button" class="avatar-pill" data-occasion="Brand Choice" aria-pressed="false">
+              <img src="./Images/zoiro_t-shirt.webp" alt="" class="avatar-pill-thumb" width="24" height="24">
+              <span>Brand Choice</span>
+            </button>
+            <button type="button" class="avatar-pill" data-occasion="Value Packs" aria-pressed="false">
+              <img src="./Images/zoiro_shorts.webp" alt="" class="avatar-pill-thumb" width="24" height="24">
+              <span>Value Packs</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="catalog-active-chip-row" id="zoiro-subfilter-row" hidden>
+          <span class="active-subfilter-pill" id="zoiro-subfilter-label">Capsule: Polos &amp; Tees</span>
+          <button type="button" class="btn-ghost-sm" id="zoiro-clear-subfilter">Show Full Archive &times;</button>
+        </div>
+
+        <div class="product-grid" id="zoiro-product-grid"></div>
+      </section>
+
+      <section class="section container" aria-label="Zoiro Motion Showcase">
+        <div class="motion-banner" id="zoiro-motion-banner">
+          <div class="motion-media">
+            <img src="./Images/zoiro_trakpants.webp" alt="Zoiro tailored lounge trousers moving in natural light" width="1280" height="720" loading="lazy">
+          </div>
+          <div class="motion-banner-content">
+            <div class="motion-banner-copy">
+              <p class="eyebrow">ZERO-CREASE MICRO-MODAL MOTION</p>
+              <h2>Tailored Stillness in Motion.</h2>
+              <p>Fluid recovery fibers engineered to hold crisp architectural lines through airport security, studio lunches, and midnight returns.</p>
+            </div>
+            <button type="button" class="motion-toggle-pill" id="zoiro-motion-toggle" aria-pressed="false">&#10074;&#10074; Pause motion</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- The Zoiro Journal -->
+      <section class="section container" id="zoiro-journal" aria-labelledby="zoiro-journal-heading">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">EDITORIAL DISPATCHES</p>
+            <h2 class="section-title" id="zoiro-journal-heading">The Zoiro Journal</h2>
+          </div>
+          <button type="button" class="btn-ghost-sm" id="zoiro-journal-all-btn" aria-haspopup="dialog">See all articles <span class="btn-arrow-circle" aria-hidden="true">&#8599;</span></button>
+        </div>
+
+        <div class="journal-grid" id="zoiro-journal-grid">
+          <button type="button" class="journal-card" data-journal-idx="0">
+            <div class="journal-card-media">
+              <img src="./Images/zoiro_polo2.webp" alt="How to Wear a Polo editorial styling guide" width="560" height="420" loading="lazy">
+            </div>
+            <div class="journal-card-body">
+              <span class="journal-meta-line">STYLE ARCHITECTURE · 4 MIN READ</span>
+              <h3>How to Wear a Polo</h3>
+              <p>Proportion rules for pairing mercerized Micro-Modal collars with pleated trousers and casual weekend shorts.</p>
+            </div>
+          </button>
+
+          <button type="button" class="journal-card" data-journal-idx="1">
+            <div class="journal-card-media">
+              <img src="./Images/sporto_track.webp" alt="Athleisure versus activewear textile comparison" width="560" height="420" loading="lazy">
+            </div>
+            <div class="journal-card-body">
+              <span class="journal-meta-line">WARDROBE THEORY · 3 MIN READ</span>
+              <h3>Athleisure vs Activewear</h3>
+              <p>Where high-compression Instacool gear ends and architectural all-day track silhouettes begin.</p>
+            </div>
+          </button>
+
+          <button type="button" class="journal-card" data-journal-idx="2">
+            <div class="journal-card-media">
+              <img src="./Images/zoiro_trakpants.webp" alt="What to wear on a long-haul flight" width="560" height="420" loading="lazy">
+            </div>
+            <div class="journal-card-body">
+              <span class="journal-meta-line">TRANSIT EDIT · 5 MIN READ</span>
+              <h3>What to Wear on a Long Flight</h3>
+              <p>Zero-crease packing formulas and breathable beechwood fibers for Bengaluru-to-London itineraries.</p>
+            </div>
+          </button>
+
+          <button type="button" class="journal-card" data-journal-idx="3">
+            <div class="journal-card-media">
+              <img src="./Images/zoiro_shorts.webp" alt="All-day comfort fabric guide" width="560" height="420" loading="lazy">
+            </div>
+            <div class="journal-card-body">
+              <span class="journal-meta-line">TEXTILE LAB · 4 MIN READ</span>
+              <h3>All-Day Comfort Guide</h3>
+              <p>Why innerwear yarn gauge and moisture-release physics determine poise across 14-hour humid days.</p>
+            </div>
+          </button>
+        </div>
+      </section>
+
+      <!-- Zoiro 4-Column Trust Strip -->
+      <section class="section container" aria-label="Zoiro Atelier Guarantees">
+        <div class="trust-strip">
+          <div class="trust-grid">
+            <div class="trust-item">
+              <span class="trust-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg>
+              </span>
+              <div>
+                <h3>Engineered Everyday Fit</h3>
+                <p>Micro-Modal sculpted proportions tailored for Indian frames.</p>
+              </div>
+            </div>
+            <div class="trust-item">
+              <span class="trust-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+              </span>
+              <div>
+                <h3>Fast Free Shipping</h3>
+                <p>Complimentary priority dispatch on all Zoiro Atelier orders.</p>
+              </div>
+            </div>
+            <div class="trust-item">
+              <span class="trust-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+              </span>
+              <div>
+                <h3>Hassle-Free 7-Day Returns</h3>
+                <p>Seamless exchange or return with complimentary doorstep pickup.</p>
+              </div>
+            </div>
+            <div class="trust-item">
+              <span class="trust-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              </span>
+              <div>
+                <h3>Secure UPI &amp; Card Checkout</h3>
+                <p>1-page encrypted settlement synced with JGH Club loyalty.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- =========================================================
+         B2B DISTRIBUTOR LINE-SHEET PORTAL (SEPARATE FROM D2C BAG)
+         ========================================================= -->
+    <section class="world-view section container" id="b2b-portal-view" aria-label="B2B Distributor Line-Sheet Portal" hidden>
+      <!-- Minimal Account Strip -->
+      <div class="b2b-account-strip">
+        <div class="b2b-account-meta">
+          <span class="b2b-label-pill">SAMPLE ENTERPRISE DATA</span>
+          <span>Account: <strong>JGH-BLR-1042</strong> (India Tier-1 Distributor)</span>
+          <span class="meta-sep" aria-hidden="true">&middot;</span>
+          <span>Credit Available: <strong>&#8377;14.5L</strong></span>
+          <span class="meta-sep" aria-hidden="true">&middot;</span>
+          <span>Dispatch Network: <strong id="b2b-primary-hub">Multi-Hub (Tirupur &middot; Kolkata &middot; Bhiwandi)</strong></span>
+        </div>
+        <div class="b2b-account-actions">
+          <button type="button" class="btn-ghost-sm" id="b2b-repeat-order-btn">&#8634; Repeat Last Order</button>
+          <button type="button" class="btn-ghost-sm" id="b2b-back-d2c-btn">&larr; D2C View</button>
+        </div>
+      </div>
+
+      <div class="b2b-desk-header">
+        <div>
+          <p class="eyebrow">WHOLESALE REPLENISHMENT DESK · 1 CARTON = 24 ASSORTED SETS · HSN 6107/6109</p>
+          <h1 class="section-title" style="font-size:clamp(1.65rem,3.2vw,2.45rem);">Distributor Line-Sheet</h1>
+        </div>
+        <div class="b2b-toolbar-right">
+          <span class="b2b-active-filter" id="b2b-active-filter">Showing: All Brands (12 SKUs)</span>
+          <div class="filter-pills" role="group" aria-label="Select Dispatch Territory">
+            <button type="button" class="filter-pill is-active" data-b2b-region="All India" aria-pressed="true">All India</button>
+            <button type="button" class="filter-pill" data-b2b-region="South India Focus" aria-pressed="false">South India Focus (+2% Rebate)</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unified Stock / Scheme Filter + Interactive Assortment Ratio Bar -->
+      <div class="b2b-controls-bar">
+        <div class="b2b-stock-pills" role="group" aria-label="Filter wholesale SKUs by stock or trade scheme">
+          <button type="button" class="b2b-chip-btn is-active" data-b2b-stock="all" aria-pressed="true">All SKUs</button>
+          <button type="button" class="b2b-chip-btn" data-b2b-stock="tirupur" aria-pressed="false">Tirupur Direct Dispatch</button>
+          <button type="button" class="b2b-chip-btn" data-b2b-stock="festive" aria-pressed="false">Festive Trade Scheme</button>
+          <button type="button" class="b2b-chip-btn" data-b2b-stock="low" aria-pressed="false">Low Stock Alert</button>
+        </div>
+
+        <div class="b2b-ratio-bar" role="group" aria-label="Carton assortment size-run ratio">
+          <span class="b2b-ratio-label">Carton Ratio:</span>
+          <button type="button" class="b2b-chip-btn is-active" data-b2b-ratio="standard" aria-pressed="true">Standard Ratio (4S &middot; 6M &middot; 6L &middot; 4XL &middot; 4XXL)</button>
+          <button type="button" class="b2b-chip-btn" data-b2b-ratio="south" aria-pressed="false">South India Fit Ratio (4S &middot; 8M &middot; 8L &middot; 4XL)</button>
+        </div>
+      </div>
+
+      <div class="b2b-layout">
+        <!-- Clean Line-Sheet Table (Left 68%) -->
+        <div class="b2b-linesheet-wrap">
+          <div class="b2b-linesheet-head" aria-hidden="true">
+            <span>Product &amp; SKU</span>
+            <span>Assortment &amp; Dispatch</span>
+            <span>Margin</span>
+            <span>Carton Rate</span>
+            <span style="text-align:right;">Order Qty</span>
+          </div>
+          <div class="b2b-linesheet" id="b2b-sku-grid" role="region" aria-label="Wholesale SKU Line-Sheet"></div>
+        </div>
+
+        <!-- Streamlined Sticky Order Manifest (Right 32%) -->
+        <aside class="b2b-quote-panel" aria-label="Purchase Order Manifest">
+          <div class="manifest-top">
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:0.5rem;flex-wrap:wrap;">
+              <span class="b2b-label-pill">SAMPLE ENTERPRISE DATA</span>
+              <span style="font-size:0.72rem;color:var(--muted);font-weight:600;" id="b2b-region-label">Dispatch: Pan-India Network (Multi-Hub)</span>
+            </div>
+            <h2 style="font-size:1.3rem;margin-top:0.55rem;">Order Manifest</h2>
+            <p class="b2b-regional-bonus" id="b2b-regional-bonus" hidden>+2% South India Regional Launch Rebate Active (Tirupur 24&ndash;48 hr Priority)</p>
+          </div>
+
+          <div class="b2b-scheme-progress">
+            <div class="scheme-progress-head">
+              <span id="b2b-scheme-hint">Add 5 cartons for +4% Trade Scheme + Free POS Kit</span>
+              <strong id="b2b-carton-progress-label">0 / 10 ctns</strong>
+            </div>
+            <div class="b2b-progress-track">
+              <div class="b2b-progress-fill" id="b2b-scheme-progress-fill" style="width:0%;"></div>
+            </div>
+            <div class="scheme-tier-list" aria-label="Trade Schemes">
+              <div class="scheme-tier" id="b2b-tier-5">
+                <span>5+ Cartons (120 Sets)</span>
+                <span>+4% Scheme + POS Kit</span>
+              </div>
+              <div class="scheme-tier" id="b2b-tier-10">
+                <span>10+ Cartons (240 Sets)</span>
+                <span>+7% + Priority Fleet</span>
+              </div>
+            </div>
+          </div>
+
+          <div id="b2b-manifest-lines" class="b2b-manifest-lines"></div>
+
+          <label class="b2b-pos-addon" id="b2b-pos-addon-wrap">
+            <input type="checkbox" id="b2b-pos-checkbox" disabled>
+            <span class="b2b-pos-text">
+              <strong>+ Include Free In-Shop POS Display Stand &amp; Danglers</strong>
+              <small id="b2b-pos-status">Unlocked at 5+ Cartons &middot; 1,00,000+ Retail Outlet Standard</small>
+            </span>
+          </label>
+
+          <div class="cart-summary-rows" style="margin-bottom:0;">
+            <div class="summary-row">
+              <span>Cartons (&times;24 Sets)</span>
+              <strong id="b2b-total-cartons">0 Cartons (0 Sets)</strong>
+            </div>
+            <div class="summary-row">
+              <span>Gross PTR Value</span>
+              <span id="b2b-gross-val">&#8377;0</span>
+            </div>
+            <div class="summary-row summary-savings">
+              <span>Trade &amp; Regional Scheme Savings</span>
+              <span id="b2b-scheme-amt">-&#8377;0</span>
+            </div>
+            <div class="summary-row">
+              <span>5% Apparel GST (HSN 6107/6109)</span>
+              <span id="b2b-gst-amt">&#8377;0</span>
+            </div>
+            <div class="summary-row summary-total">
+              <span>Net Payable Amount</span>
+              <strong id="b2b-net-val">&#8377;0</strong>
+            </div>
+            <div class="summary-row b2b-margin-summary">
+              <span>Estimated Retailer Margin Value</span>
+              <strong id="b2b-retailer-margin">&#8377;0</strong>
+            </div>
+          </div>
+
+          <div class="checkout-field-row">
+            <label for="b2b-partner-code">Distributor PO Ref / Account Code</label>
+            <input type="text" id="b2b-partner-code" class="demo-input" value="JGH-BLR-1042" autocomplete="off">
+          </div>
+
+          <button type="button" class="btn-primary btn-full" id="b2b-request-quote-btn" disabled>Submit Purchase Order <span class="btn-arrow-circle" aria-hidden="true">&#8599;</span></button>
+          <p class="checkout-confirm-msg" id="b2b-quote-msg" role="status" aria-live="polite" hidden></p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         FULL-PAGE PRODUCT DETAIL VIEW (PDP)
+         ========================================================= -->
+    <section class="world-view pdp-view" id="pdp-view" data-pdp-brand="macho" aria-labelledby="pdp-title" hidden>
+      <!-- 1. Editorial Breadcrumb Bar -->
+      <div class="pdp-breadcrumb-bar">
+        <div class="pdp-shell pdp-breadcrumb-inner">
+          <button type="button" class="pdp-back-btn" id="pdp-back-btn">
+            <span aria-hidden="true">&larr;</span>
+            <span>Back to <strong id="pdp-back-brand-label">All Hub</strong></span>
+          </button>
+          <nav class="pdp-crumb-trail" aria-label="Product breadcrumb">
+            <span id="pdp-crumb-brand">MACHO</span>
+            <span class="pdp-crumb-sep" aria-hidden="true">/</span>
+            <span id="pdp-crumb-category">Trunks · Heritage Core</span>
+            <span class="pdp-crumb-sep" aria-hidden="true">/</span>
+            <strong id="pdp-crumb-title">Macho Trunks Pack of 3</strong>
+          </nav>
+        </div>
+      </div>
+
+      <div class="pdp-shell pdp-main-wrap">
+        <!-- 2. Two-Column Editorial Split -->
+        <div class="pdp-split">
+          <!-- LEFT COLUMN: Sticky Studio Showcase -->
+          <div class="pdp-showcase-col">
+            <div class="pdp-stage" id="pdp-stage">
+              <img id="pdp-stage-img" src="./Images/macho.webp" alt="Product studio portrait" class="pdp-stage-img" width="760" height="950">
+
+              <div class="pdp-stage-badges">
+                <span class="cart-brand-pill" id="pdp-stage-brand-badge" data-item-brand="macho">AMUL MACHO</span>
+                <span class="pdp-stage-pill" id="pdp-stage-status-badge">-20% OFF</span>
+              </div>
+
+              <!-- Floating Fit Guide Spec Card (Mode 3: Fit Guide) -->
+              <div class="pdp-fit-guide-card" id="pdp-fit-guide-card" hidden>
+                <div class="pdp-fit-guide-head">
+                  <span>TAILORED FIT INTELLIGENCE</span>
+                  <button type="button" class="pdp-fit-calibrate-link" id="pdp-fit-guide-cta" data-open-fit-finder>Calibrate Fit &#8599;</button>
+                </div>
+                <dl class="pdp-fit-metrics">
+                  <div>
+                    <dt>Garment Cut</dt>
+                    <dd id="pdp-fit-cut">Contoured Zero-Roll</dd>
+                  </div>
+                  <div>
+                    <dt>Fabric GSM</dt>
+                    <dd id="pdp-fit-gsm">180 GSM</dd>
+                  </div>
+                  <div>
+                    <dt>Composition</dt>
+                    <dd id="pdp-fit-comp">100% Super-Combed Cotton</dd>
+                  </div>
+                  <div>
+                    <dt>Smart Fit Match</dt>
+                    <dd id="pdp-fit-live-rec">Use Find My Fit</dd>
+                  </div>
+                </dl>
+              </div>
+
+              <!-- Bottom-Center Frosted Glass 3-Mode View Switcher -->
+              <div class="pdp-mode-switcher" id="pdp-view-modes" role="tablist" aria-label="Product showcase view mode">
+                <button type="button" role="tab" class="pdp-mode-pill is-active" data-pdp-mode="studio" aria-selected="true">Studio View</button>
+                <button type="button" role="tab" class="pdp-mode-pill" data-pdp-mode="weave" aria-selected="false">Weave Zoom</button>
+                <button type="button" role="tab" class="pdp-mode-pill" data-pdp-mode="fit" aria-selected="false">Fit Guide</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT COLUMN: Scrollable Buy & Spec Panel -->
+          <div class="pdp-buy-col">
+            <div class="pdp-header-block">
+              <div class="pdp-brand-eyebrow-row">
+                <img id="pdp-brand-logo" src="./Images/logo_macho.png" alt="Amul Macho" class="pdp-brand-logo" width="160" height="22">
+                <span class="pdp-eyebrow-sep" aria-hidden="true">&middot;</span>
+                <p class="eyebrow pdp-category-eyebrow" id="pdp-category">TRUNKS &middot; HERITAGE CORE</p>
+              </div>
+              <h1 class="pdp-title" id="pdp-title">Macho Trunks Pack of 3</h1>
+              <p class="pdp-rating" id="pdp-rating">&#9733; 4.9 &middot; 184 Verified Reviews</p>
+
+              <div class="pdp-price-block">
+                <div class="pdp-price-row">
+                  <span class="pdp-price-sale" id="pdp-price">&#8377;477</span>
+                  <span class="pdp-price-mrp" id="pdp-mrp">&#8377;597</span>
+                  <span class="pdp-price-save" id="pdp-save">-20% OFF</span>
+                </div>
+                <p class="pdp-tax-note">Inclusive of all taxes &middot; Direct J.G. Hosiery Dispatch</p>
+              </div>
+
+              <p class="pdp-desc" id="pdp-desc">100% super-combed Indian cotton trunks with soft micro-brushed jacquard waistband for all-day Bade Aaram Se poise.</p>
+              <div class="pdp-specs-row" id="pdp-specs"></div>
+            </div>
+
+            <div class="pdp-option-block">
+              <span class="pdp-option-label">Colorway: <strong id="pdp-colorway-label">Heritage Red</strong></span>
+              <div class="swatch-row pdp-swatches" id="pdp-swatches"></div>
+            </div>
+
+            <div class="pdp-option-block">
+              <div class="pdp-size-head">
+                <span class="pdp-option-label">Select Size</span>
+                <button type="button" class="pdp-find-fit-link" id="pdp-fit-finder-btn" data-open-fit-finder aria-haspopup="dialog">Find My Fit &#8599;</button>
+              </div>
+              <div class="pdp-size-row" id="pdp-sizes" role="group" aria-label="Select size"></div>
+              <p class="stock-status-note" id="pdp-stock-note" role="status" aria-live="polite" hidden></p>
+
+              <!-- Inline Out-of-Stock Recovery Notify Bar -->
+              <form class="pdp-restock-box" id="pdp-restock-form" hidden>
+                <label class="sr-only" for="pdp-restock-contact">WhatsApp number or email for restock notification</label>
+                <input type="text" id="pdp-restock-contact" class="pdp-restock-input" placeholder="Enter WhatsApp number or email" autocomplete="email">
+                <button type="submit" class="pdp-restock-btn" id="pdp-restock-submit">Alert Me</button>
+              </form>
+            </div>
+
+            <div class="pdp-cta-stack">
+              <div class="pdp-qty-cta-row">
+                <div class="qty-stepper pdp-qty-stepper" aria-label="Select quantity">
+                  <button type="button" id="pdp-qty-minus" aria-label="Decrease quantity">&minus;</button>
+                  <span id="pdp-qty-val">1</span>
+                  <button type="button" id="pdp-qty-plus" aria-label="Increase quantity">+</button>
+                </div>
+                <button type="button" class="btn-primary pdp-add-bag-btn" id="pdp-add-cart-btn">Add to Bag <span class="btn-arrow-circle" aria-hidden="true">&#8599;</span></button>
+              </div>
+              <button type="button" class="pdp-box-btn" id="pdp-add-box-btn" hidden>+ Drop into 5-Slot Collector Box</button>
+            </div>
+
+            <!-- Indian Pincode Delivery Checker -->
+            <form class="pdp-pincode-card" id="pdp-pincode-form" novalidate>
+              <label for="pdp-pincode-input" class="pdp-pincode-label">DELIVERY &amp; COD AVAILABILITY</label>
+              <div class="pdp-pincode-row">
+                <input type="text" id="pdp-pincode-input" class="pdp-pincode-input" inputmode="numeric" maxlength="6" placeholder="Enter 6-digit pincode" autocomplete="postal-code">
+                <button type="submit" class="pdp-pincode-btn" id="pdp-pincode-btn">Check</button>
+              </div>
+              <p class="pdp-pincode-msg" id="pdp-pincode-msg" role="status" aria-live="polite" hidden></p>
+            </form>
+
+            <!-- 3 Collapsible Hairline Accordions -->
+            <div class="pdp-accordions" aria-label="Product specifications">
+              <details class="pdp-accordion" open>
+                <summary>Fabric &amp; Construction</summary>
+                <div class="pdp-accordion-body" id="pdp-acc-fabric"></div>
+              </details>
+              <details class="pdp-accordion">
+                <summary>Wash &amp; Care</summary>
+                <div class="pdp-accordion-body" id="pdp-acc-care">
+                  <p>Machine wash cold on a gentle cycle using mild detergent. Do not bleach or dry clean. Line dry in shade to preserve elastic recovery and yarn luster; warm iron inside out if needed.</p>
+                </div>
+              </details>
+              <details class="pdp-accordion">
+                <summary>Shipping &amp; 7-Day Returns</summary>
+                <div class="pdp-accordion-body" id="pdp-acc-shipping">
+                  <p>Complimentary prepaid dispatch across India via Tirupur, Kolkata, and Bhiwandi fulfillment hubs. Eligible for hassle-free 7-day size exchange or return on unopened/unworn packs with original tags intact.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Below-the-Fold: Brand Fabric Architecture Bento -->
+        <section class="pdp-section" aria-labelledby="pdp-bento-heading">
+          <div class="pdp-section-head">
+            <p class="eyebrow">TEXTILE ENGINEERING ARCHITECTURE</p>
+            <h2 class="pdp-section-title" id="pdp-bento-heading">Material Science Inside Every Thread</h2>
+          </div>
+          <div class="pdp-bento-grid" id="pdp-bento-grid"></div>
+        </section>
+
+        <!-- 4. Below-the-Fold: Complete Your Daily Rotation (Cross-Brand Row) -->
+        <section class="pdp-section" aria-labelledby="pdp-rotation-heading">
+          <div class="pdp-section-head">
+            <p class="eyebrow">UNIFIED J.G. HOSIERY ECOSYSTEM PAIRINGS</p>
+            <h2 class="pdp-section-title" id="pdp-rotation-heading">Complete Your Daily Rotation</h2>
+          </div>
+          <div class="pdp-related-grid" id="pdp-related-grid"></div>
+        </section>
+
+        <!-- 5. Below-the-Fold: 4-Column Trust Strip -->
+        <section class="pdp-section" aria-label="Product guarantees">
+          <div class="pdp-trust-strip">
+            <div class="trust-grid">
+              <div class="trust-item">
+                <span class="trust-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg>
+                </span>
+                <div>
+                  <h3>Engineered Everyday Fit</h3>
+                  <p>Calibrated on authentic Indian waist and torso proportions.</p>
+                </div>
+              </div>
+              <div class="trust-item">
+                <span class="trust-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                </span>
+                <div>
+                  <h3>Fast Free Shipping</h3>
+                  <p>Priority dispatch from Tirupur, Kolkata &amp; Bhiwandi hubs.</p>
+                </div>
+              </div>
+              <div class="trust-item">
+                <span class="trust-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+                </span>
+                <div>
+                  <h3>7-Day Easy Returns</h3>
+                  <p>Hassle-free doorstep pickup and instant exchange credit.</p>
+                </div>
+              </div>
+              <div class="trust-item">
+                <span class="trust-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                </span>
+                <div>
+                  <h3>Secure UPI &amp; Card Checkout</h3>
+                  <p>Unified single-bag settlement across Macho, Sporto &amp; Zoiro.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- 6. Mobile Sticky Checkout Bar (<= 768px) -->
+      <div class="pdp-mobile-bar" id="pdp-mobile-bar" aria-label="Mobile quick checkout">
+        <div class="pdp-mobile-meta">
+          <strong class="pdp-mobile-price" id="pdp-mobile-price">&#8377;477</strong>
+          <span class="pdp-mobile-size">Size <strong id="pdp-mobile-size">M</strong></span>
+        </div>
+        <button type="button" class="btn-primary pdp-mobile-cta" id="pdp-mobile-add-btn">Add to Bag <span class="btn-arrow-circle" aria-hidden="true">&#8599;</span></button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong class="footer-brand">MACHO CONNECT · J.G. HOSIERY PVT. LTD.</strong>
+        <p class="footer-note">Interactive luxury digital flagship pitch prototype (mock commercial pricing &amp; sample data; non-production demo).</p>
+      </div>
+      <div class="footer-links">
+        <button type="button" class="footer-link-btn" data-switch-brand="hub">All Hub</button>
+        <button type="button" class="footer-link-btn" data-switch-brand="macho">Macho</button>
+        <button type="button" class="footer-link-btn" data-switch-brand="sporto">Sporto</button>
+        <button type="button" class="footer-link-btn" data-switch-brand="zoiro">Zoiro</button>
+        <button type="button" class="footer-link-btn regional-footer-btn" id="south-india-toggle" aria-pressed="false">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span>South India Campaign</span>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Single Floating 3-Tap Wardrobe Concierge Pill -->
+  <button type="button" class="concierge-fab" id="concierge-fab" aria-haspopup="dialog" aria-controls="concierge-dialog">
+    <span aria-hidden="true">&#10022;</span>
+    <span>Build My Kit</span>
+  </button>
+
+  <!-- =========================================================
+       NATIVE DIALOG: UNIFIED CART DRAWER & 1-PAGE CHECKOUT
+       ========================================================= -->
+  <dialog class="drawer-dialog" id="cart-dialog" aria-labelledby="cart-dialog-title">
+    <div class="drawer-panel">
+      <div class="drawer-header">
+        <div>
+          <p class="eyebrow" id="cart-drawer-eyebrow">UNIFIED HOUSE OF BRANDS BAG</p>
+          <h2 id="cart-dialog-title">Shopping Bag (<span id="drawer-count">0</span>)</h2>
+        </div>
+        <button type="button" class="icon-close-btn" id="cart-close-btn" aria-label="Close shopping bag">&times;</button>
+      </div>
+
+      <div class="drawer-body">
+        <div class="bag-view" id="cart-bag-view">
+          <div id="cart-items-container" style="display:flex;flex-direction:column;gap:0.85rem;"></div>
+          <div class="cart-upsell-box" id="cart-upsell-container" hidden></div>
+        </div>
+
+        <div class="checkout-panel" id="cart-checkout-view" hidden>
+          <button type="button" class="back-to-bag-btn" id="checkout-back-btn">&larr; Back to Shopping Bag</button>
+
+          <div class="checkout-card">
+            <h3>1. Express Delivery Address</h3>
+            <p style="font-size:0.8rem;"><strong>Aarav Nair</strong> · Indiranagar 100ft Rd, Bengaluru 560038</p>
+            <p style="font-size:0.74rem;color:var(--muted);">Same-day Hub dispatch across Macho, Sporto &amp; Zoiro.</p>
+          </div>
+
+          <div class="checkout-card">
+            <h3>2. Express Payment Method</h3>
+            <div class="pay-method-grid" role="group" aria-label="Select payment mode">
+              <button type="button" class="pay-method-btn" data-pay-mode="upi" aria-pressed="true">Express UPI</button>
+              <button type="button" class="pay-method-btn" data-pay-mode="card" aria-pressed="false">Credit / Debit Card</button>
+            </div>
+            <div class="checkout-field-row" id="pay-upi-fields">
+              <label for="checkout-upi-input">UPI ID (Demo Simulation)</label>
+              <input type="text" id="checkout-upi-input" class="demo-input" value="aarav@okicici" autocomplete="off">
+            </div>
+            <div class="checkout-field-row" id="pay-card-fields" hidden>
+              <label for="checkout-card-input">Card Ending In (Demo Simulation)</label>
+              <input type="text" id="checkout-card-input" class="demo-input" value="•••• •••• •••• 4829 · 09/29" autocomplete="off">
+            </div>
+          </div>
+
+          <div class="checkout-card">
+            <h3>3. Order &amp; Loyalty Preview</h3>
+            <div class="summary-row" style="font-size:0.84rem;">
+              <span>Payable Total</span>
+              <strong id="checkout-payable-total">&#8377;0</strong>
+            </div>
+            <div class="summary-row summary-savings" style="font-size:0.8rem;">
+              <span>JGH Club Points on Confirm</span>
+              <span id="checkout-loyalty-preview">+0 pts</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="confirmed-panel" id="cart-confirmed-view" hidden>
+          <div class="confirmed-card">
+            <span class="loyalty-pill" id="confirmed-loyalty-badge">+0 JGH Club Points Earned</span>
+            <h3 style="font-size:1.3rem;">Order Confirmed</h3>
+            <p style="font-size:0.8rem;color:var(--muted);" id="confirmed-order-meta">Order #MC-2026-8412 · Dispatching via JGH Unified Fulfillment</p>
+
+            <div class="qr-loyalty-box" aria-label="Macho Connect Loyalty Pass QR Code">
+              <svg width="118" height="118" viewBox="0 0 29 29" fill="#111111" shape-rendering="crispEdges" role="img" aria-label="Demo Loyalty QR Pass">
+                <rect width="29" height="29" fill="#ffffff"/>
+                <path d="M1,1 h7 v7 h-7 z M2,2 v5 h5 v-5 z M3,3 h3 v3 h-3 z M21,1 h7 v7 h-7 z M22,2 v5 h5 v-5 z M23,3 h3 v3 h-3 z M1,21 h7 v7 h-7 z M2,22 v5 h5 v-5 z M3,23 h3 v3 h-3 z"/>
+                <path d="M10,2 h2 v2 h-2 z M14,1 h3 v2 h-3 z M18,3 h2 v3 h-2 z M10,6 h4 v2 h-4 z M15,6 h3 v3 h-3 z M11,10 h7 v2 h-7 z M2,10 h4 v2 h-4 z M7,11 h2 v4 h-2 z M10,14 h3 v3 h-3 z M15,13 h5 v2 h-5 z M22,10 h5 v2 h-5 z M21,13 h2 v4 h-2 z M25,14 h3 v3 h-3 z M12,18 h4 v2 h-4 z M17,17 h3 v4 h-3 z M22,19 h6 v2 h-6 z M10,22 h3 v5 h-3 z M15,21 h2 v3 h-2 z M19,23 h4 v4 h-4 z M25,23 h3 v2 h-3 z M15,26 h3 v2 h-3 z"/>
+              </svg>
+              <strong style="font-size:0.72rem;letter-spacing:0.08em;">SCAN FOR REWARDS · DEMO PASS</strong>
+            </div>
+
+            <p style="font-size:0.76rem;color:var(--muted);">Redeemable across Macho, Sporto &amp; Zoiro direct and 1.1L+ retail touchpoints. (Mock prototype; no real payment processed.)</p>
+            <button type="button" class="btn-primary btn-full" id="confirmed-done-btn">Done · Continue Exploring</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="drawer-footer" id="cart-drawer-footer">
+        <div class="cart-summary-rows">
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span id="cart-subtotal">&#8377;0</span>
+          </div>
+          <div class="summary-row summary-savings" id="cart-savings-row" hidden>
+            <span>Pack &amp; Bundle Savings</span>
+            <span id="cart-savings">-&#8377;0</span>
+          </div>
+          <div class="summary-row">
+            <span>Shipping</span>
+            <span id="cart-shipping">Calculated at checkout</span>
+          </div>
+          <div class="summary-row summary-total">
+            <span>Total</span>
+            <strong id="cart-total">&#8377;0</strong>
+          </div>
+        </div>
+
+        <div class="drawer-actions" id="cart-bag-actions">
+          <button type="button" class="btn-primary btn-full" id="cart-checkout-btn" disabled>Proceed to Checkout</button>
+          <button type="button" class="btn-ghost-sm btn-full" id="cart-clear-btn">Clear Bag</button>
+        </div>
+        <div class="drawer-actions" id="cart-checkout-actions" hidden>
+          <button type="button" class="btn-primary btn-full" id="confirm-order-btn">Confirm &amp; Pay Demo Order</button>
+        </div>
+        <p class="checkout-confirm-msg" id="checkout-confirm-msg" role="status" aria-live="polite" hidden></p>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- =========================================================
+       NATIVE DIALOG: 30-SECOND SMART FIT FINDER
+       ========================================================= -->
+  <dialog class="modal-dialog" id="fit-finder-dialog" aria-labelledby="fit-finder-title">
+    <div class="modal-panel">
+      <div class="modal-header">
+        <div>
+          <p class="eyebrow">30-SECOND PRECISION SIZING</p>
+          <h2 id="fit-finder-title">Smart Fit Finder</h2>
+        </div>
+        <button type="button" class="icon-close-btn" id="fit-close-btn" aria-label="Close Smart Fit Finder">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="step-indicator" aria-label="Fit Finder Steps">
+          <span class="step-chip is-active" id="fit-chip-1">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <defs>
+                <linearGradient id="svg-fit-waist" x1="3" y1="6" x2="21" y2="18" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#f8fafc"/>
+                  <stop offset="100%" stop-color="#94a3b8"/>
+                </linearGradient>
+              </defs>
+              <ellipse cx="12" cy="12" rx="8.5" ry="4.5" fill="url(#svg-fit-waist)" fill-opacity="0.28" stroke="url(#svg-fit-waist)" stroke-width="1.5"/>
+              <path d="M8 9.2V11.2M12 8.2V10.5M16 9.2V11.2" stroke="#ffffff" stroke-width="1.2" stroke-linecap="round"/>
+            </svg>
+            <span>1. Waist &amp; Chest</span>
+          </span>
+          <span class="step-chip" id="fit-chip-2">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <defs>
+                <linearGradient id="svg-fit-build" x1="4" y1="4" x2="20" y2="20" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#f5e6c8"/>
+                  <stop offset="100%" stop-color="#b79a5b"/>
+                </linearGradient>
+              </defs>
+              <path d="M6 7L12 4L18 7L16 14L12 20L8 14L6 7Z" fill="url(#svg-fit-build)" fill-opacity="0.34" stroke="url(#svg-fit-build)" stroke-width="1.4"/>
+              <path d="M12 4V20" stroke="#ffffff" stroke-opacity="0.65" stroke-width="1.1"/>
+            </svg>
+            <span>2. Body Build</span>
+          </span>
+          <span class="step-chip" id="fit-chip-3">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <defs>
+                <linearGradient id="svg-fit-pref" x1="4" y1="5" x2="20" y2="19" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#fca5a5"/>
+                  <stop offset="100%" stop-color="#d7192d"/>
+                </linearGradient>
+              </defs>
+              <path d="M5 10C7.5 6 16.5 6 19 10L17 18H7L5 10Z" fill="url(#svg-fit-pref)" fill-opacity="0.34" stroke="url(#svg-fit-pref)" stroke-width="1.4"/>
+              <path d="M7.5 10.5L16.5 10.5" stroke="#ffffff" stroke-opacity="0.7" stroke-width="1.2" stroke-linecap="round"/>
+            </svg>
+            <span>3. Fit &amp; Result</span>
+          </span>
+        </div>
+
+        <!-- Step 1: Dual Measurements + IN | CM Toggle -->
+        <div id="fit-step-1">
+          <div class="fit-step-head">
+            <p class="section-subtitle">Select both lower waist and upper chest measurements for zone-matched sizing:</p>
+            <div class="fit-unit-toggle" role="group" aria-label="Measurement unit toggle">
+              <button type="button" class="fit-unit-btn" id="fit-unit-in" data-fit-unit="IN" aria-pressed="true">IN</button>
+              <button type="button" class="fit-unit-btn" id="fit-unit-cm" data-fit-unit="CM" aria-pressed="false">CM</button>
+            </div>
+          </div>
+
+          <div class="fit-zone-block">
+            <span class="fit-zone-label">Row 1 &middot; Waist (Trunks, Briefs, Joggers, Shorts)</span>
+            <div class="fit-waist-grid" id="fit-waist-options"></div>
+          </div>
+
+          <div class="fit-zone-block">
+            <span class="fit-zone-label">Row 2 &middot; Chest / Usual Tee Size (Vests, Tees, Polos, Overshirts)</span>
+            <div class="fit-chest-grid" id="fit-chest-options"></div>
+          </div>
+
+          <div class="hero-cta-row">
+            <button type="button" class="btn-primary btn-sm" id="fit-next-1">Next: Body Build &rarr;</button>
+          </div>
+        </div>
+
+        <!-- Step 2: Build -->
+        <div id="fit-step-2" hidden>
+          <p class="section-subtitle" style="margin-bottom:0.75rem;">How would you describe your upper &amp; hip build?</p>
+          <div class="fit-options-grid" id="fit-build-options">
+            <button type="button" class="fit-choice-card" data-fit-build="Lean" aria-pressed="false">
+              <strong>Lean</strong>
+              <span>Slender frame &amp; slim hip line</span>
+            </button>
+            <button type="button" class="fit-choice-card" data-fit-build="Athletic" aria-pressed="true">
+              <strong>Athletic</strong>
+              <span>Broader shoulders &amp; muscular quads</span>
+            </button>
+            <button type="button" class="fit-choice-card" data-fit-build="Broad" aria-pressed="false">
+              <strong>Broad</strong>
+              <span>Fuller chest &amp; relaxed mid-section</span>
+            </button>
+          </div>
+          <div class="hero-cta-row">
+            <button type="button" class="btn-ghost-sm" id="fit-back-2">&larr; Back</button>
+            <button type="button" class="btn-primary btn-sm" id="fit-next-2">Next: Fit Preference &rarr;</button>
+          </div>
+        </div>
+
+        <!-- Step 3: Preference + Result -->
+        <div id="fit-step-3" hidden>
+          <p class="section-subtitle" style="margin-bottom:0.75rem;">Pick your preferred fit feel—we calibrate sizes per JGH brand block instantly:</p>
+          <div class="fit-options-grid" id="fit-pref-options">
+            <button type="button" class="fit-choice-card" data-fit-pref="Snug" aria-pressed="false">
+              <strong>Snug</strong>
+              <span>Body-contoured zero-bunch hold</span>
+            </button>
+            <button type="button" class="fit-choice-card" data-fit-pref="Classic" aria-pressed="true">
+              <strong>Classic</strong>
+              <span>Balanced everyday comfort &amp; support</span>
+            </button>
+            <button type="button" class="fit-choice-card" data-fit-pref="Relaxed" aria-pressed="false">
+              <strong>Relaxed</strong>
+              <span>Airy extra breathing room</span>
+            </button>
+          </div>
+
+          <div class="fit-result-grid" style="margin-top:0.85rem;">
+            <div class="fit-brand-box">
+              <span class="cart-brand-pill" data-item-brand="macho">MACHO</span>
+              <div class="fit-dual-lines">
+                <div class="fit-zone-rec"><span>Tops / Vests</span><strong id="fit-res-macho-top">L (100 cm)</strong></div>
+                <div class="fit-zone-rec"><span>Bottoms / Trunks</span><strong id="fit-res-macho-bottom">M (85 cm)</strong></div>
+              </div>
+              <span style="font-size:0.72rem;color:var(--muted);">Combed Cotton Precision</span>
+            </div>
+            <div class="fit-brand-box">
+              <span class="cart-brand-pill" data-item-brand="sporto">SPORTO</span>
+              <div class="fit-dual-lines">
+                <div class="fit-zone-rec"><span>Tops / Tees</span><strong id="fit-res-sporto-top">XL (105 cm)</strong></div>
+                <div class="fit-zone-rec"><span>Bottoms / Track</span><strong id="fit-res-sporto-bottom">L (90 cm)</strong></div>
+              </div>
+              <span style="font-size:0.72rem;color:var(--muted);">4-Way Active Block</span>
+            </div>
+            <div class="fit-brand-box">
+              <span class="cart-brand-pill" data-item-brand="zoiro">ZOIRO</span>
+              <div class="fit-dual-lines">
+                <div class="fit-zone-rec"><span>Tops / Polos</span><strong id="fit-res-zoiro-top">L (100 cm)</strong></div>
+                <div class="fit-zone-rec"><span>Bottoms / Lounge</span><strong id="fit-res-zoiro-bottom">M (85 cm)</strong></div>
+              </div>
+              <span style="font-size:0.72rem;color:var(--muted);">Micro-Modal Tailored Drape</span>
+            </div>
+          </div>
+
+          <div class="hero-cta-row">
+            <button type="button" class="btn-ghost-sm" id="fit-back-3">&larr; Back</button>
+            <button type="button" class="btn-primary btn-sm" id="fit-save-apply-btn">Save My Fit Profile &amp; Apply</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- =========================================================
+       NATIVE DIALOG: 3-TAP WARDROBE CONCIERGE
+       ========================================================= -->
+  <dialog class="drawer-dialog" id="concierge-dialog" aria-labelledby="concierge-title">
+    <div class="drawer-panel">
+      <div class="drawer-header">
+        <div>
+          <p class="eyebrow">3-TAP CURATED STYLIST</p>
+          <h2 id="concierge-title">Wardrobe Concierge</h2>
+        </div>
+        <button type="button" class="icon-close-btn" id="concierge-close-btn" aria-label="Close Wardrobe Concierge">&times;</button>
+      </div>
+
+      <div class="drawer-body">
+        <div>
+          <p style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent-text);margin-bottom:0.45rem;">Tap 1 · Select Occasion</p>
+          <div class="fit-options-grid" style="grid-template-columns:1fr;">
+            <button type="button" class="fit-choice-card" data-concierge-occasion="Gym + Daily" aria-pressed="true">
+              <strong>Gym + Daily</strong>
+              <span>Morning workout performance + cool combed cotton base</span>
+            </button>
+            <button type="button" class="fit-choice-card" data-concierge-occasion="3-Day Business Trip" aria-pressed="false">
+              <strong>3-Day Business Trip</strong>
+              <span>Airport transit drape, executive polo &amp; travel packs</span>
+            </button>
+            <button type="button" class="fit-choice-card" data-concierge-occasion="Complete Refresh" aria-pressed="false">
+              <strong>Complete Refresh</strong>
+              <span>Top-to-bottom 3-brand capsule across all hours</span>
+            </button>
+          </div>
+        </div>
+
+        <div>
+          <p style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent-text);margin-bottom:0.45rem;">Tap 2 · Select Budget Tier</p>
+          <div class="fit-options-grid" style="grid-template-columns:repeat(3, 1fr);">
+            <button type="button" class="fit-choice-card" data-concierge-budget="Value" aria-pressed="false">
+              <strong>Value</strong>
+              <span>Smart Core</span>
+            </button>
+            <button type="button" class="fit-choice-card" data-concierge-budget="Balanced" aria-pressed="true">
+              <strong>Balanced</strong>
+              <span>Bestsellers</span>
+            </button>
+            <button type="button" class="fit-choice-card" data-concierge-budget="Premium" aria-pressed="false">
+              <strong>Premium</strong>
+              <span>Atelier Edit</span>
+            </button>
+          </div>
+        </div>
+
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.45rem;">
+            <p style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent-text);">Tap 3 · Your 3-Brand Kit (-15%)</p>
+            <span style="font-size:0.72rem;color:var(--muted);" id="concierge-fit-note">Size M</span>
+          </div>
+          <div class="concierge-kit-list" id="concierge-kit-list"></div>
+        </div>
+      </div>
+
+      <div class="drawer-footer">
+        <div class="cart-summary-rows" style="margin-bottom:0.75rem;">
+          <div class="summary-row">
+            <span>3-Piece Kit Individual Value</span>
+            <span id="concierge-mrp">&#8377;0</span>
+          </div>
+          <div class="summary-row summary-savings">
+            <span>Concierge Bundle Savings (15%)</span>
+            <span id="concierge-save">-&#8377;0</span>
+          </div>
+          <div class="summary-row summary-total">
+            <span>Kit Price</span>
+            <strong id="concierge-total">&#8377;0</strong>
+          </div>
+        </div>
+        <button type="button" class="btn-primary btn-full" id="concierge-add-btn">Add Complete Kit to Bag</button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- =========================================================
+       NATIVE DIALOG: THE ZOIRO JOURNAL READER
+       ========================================================= -->
+  <dialog class="modal-dialog journal-dialog" id="journal-dialog" aria-labelledby="journal-dialog-title">
+    <div class="modal-panel">
+      <div class="modal-header">
+        <div>
+          <p class="eyebrow">THE ZOIRO JOURNAL · READING ROOM</p>
+          <h2 id="journal-dialog-title">How to Wear a Polo</h2>
+        </div>
+        <button type="button" class="icon-close-btn" id="journal-close-btn" aria-label="Close journal article">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="journal-tab-row" id="journal-tab-row" role="tablist" aria-label="Journal articles"></div>
+
+        <div class="journal-hero-img">
+          <img id="journal-reader-img" src="./Images/zoiro_polo2.webp" alt="Journal feature visual" class="model-photo" width="760" height="428">
+        </div>
+
+        <span class="journal-meta-line" id="journal-reader-meta">STYLE ARCHITECTURE · 4 MIN READ</span>
+        <p id="journal-reader-lead" style="font-size:0.94rem;color:var(--text);line-height:1.6;"></p>
+        <ul class="journal-bullets" id="journal-reader-bullets"></ul>
+
+        <div class="hero-cta-row" style="margin-top:0.4rem;">
+          <button type="button" class="btn-primary btn-sm" id="journal-shop-piece-btn">Shop Featured Piece <span class="btn-arrow-circle" aria-hidden="true">&#8599;</span></button>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- =========================================================
+       NATIVE DIALOG: PROFORMA PURCHASE ORDER SUMMARY (B2B)
+       ========================================================= -->
+  <dialog class="modal-dialog b2b-po-dialog" id="b2b-po-dialog" aria-labelledby="b2b-po-title">
+    <div class="modal-panel">
+      <div class="modal-header">
+        <div>
+          <div class="po-brand-row">
+            <img id="b2b-po-brand-logo" src="./Images/logo_macho_light.png" alt="Amul Macho official logo" class="po-brand-logo" width="175" height="20">
+            <span class="b2b-label-pill">SAMPLE ENTERPRISE DATA &middot; PROFORMA PO</span>
+          </div>
+          <h2 id="b2b-po-title" style="margin-top:0.45rem;">Proforma Purchase Order Summary</h2>
+        </div>
+        <button type="button" class="icon-close-btn" id="b2b-po-close-btn" aria-label="Close proforma summary">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="po-meta-banner" id="po-modal-meta"></div>
+
+        <div class="po-table-wrap">
+          <table class="po-table">
+            <thead>
+              <tr>
+                <th>SKU &amp; Product</th>
+                <th>Hub</th>
+                <th>Cartons</th>
+                <th>Sets</th>
+                <th style="text-align:right;">Line PTR</th>
+              </tr>
+            </thead>
+            <tbody id="po-modal-rows"></tbody>
+          </table>
+        </div>
+
+        <div class="po-totals-box" id="po-modal-totals"></div>
+
+        <div class="po-actions-row">
+          <button type="button" class="btn-primary" id="b2b-download-csv-btn">Download PO (.CSV) <span class="btn-arrow-circle" aria-hidden="true">&#8595;</span></button>
+          <button type="button" class="btn-ghost-sm" id="b2b-po-done-btn">Done</button>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- =========================================================
+       NATIVE DIALOG: SEARCH OVERLAY
+       ========================================================= -->
+  <dialog class="search-dialog" id="search-dialog" aria-labelledby="search-dialog-title">
+    <div class="search-panel">
+      <div class="search-header">
+        <h2 id="search-dialog-title" class="sr-only">Search Macho Connect Catalog</h2>
+        <search class="search-form-wrap">
+          <label for="catalog-search-input" class="sr-only">Search Macho, Sporto, and Zoiro products</label>
+          <input
+            type="search"
+            id="catalog-search-input"
+            class="search-input"
+            placeholder="Search trunks, vests, polos, track pants, Zoiro, Sporto..."
+            autocomplete="off"
+          >
+        </search>
+        <button type="button" class="icon-close-btn" id="search-close-btn" aria-label="Close search">&times;</button>
+      </div>
+      <div class="search-results" id="search-results" aria-live="polite"></div>
+    </div>
+  </dialog>
+
+  <!-- Global pointer ambient aura (desktop hover devices) -->
+  <div class="cursor-aura" id="cursor-aura" aria-hidden="true"></div>
+
+  <!-- Live toast feedback -->
+  <div class="toast" id="live-toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>

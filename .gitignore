@@ -1,0 +1,10 @@
+# OS & Office temp files
+.DS_Store
+Thumbs.db
+~$*.docx
+~$*.xlsx
+
+# Raw unreferenced Shopify / lookbook download archives (active curated assets live in Images/)
+sporto-website-assets/
+Men*Zoiro*/
+Shop Men*Zoiro*/
